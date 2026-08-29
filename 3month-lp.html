@@ -2,1591 +2,618 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3ヶ月根本回復プログラム｜女性の為の整体 ゆいどころ（沖縄・北中城）</title>
-<meta name="description" content="自分を後回しにしてしまう、わたし達へ。作業療法士による施術×週1運動×AI伴走で、産後の体と心を罪悪感なしで取り戻す3ヶ月のオーダーメイド伴走プログラム。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3ヶ月伴走コース｜女性の為の整体 ゆいどころ（沖縄・北中城）</title>
+<meta name="description" content="あなたの目標に合わせて3ヶ月伴走します。個別施術90分×月2回、体に合わせたエクササイズ動画、LINEでのセルフケア相談。月19,900円（税込）×3ヶ月＝総額59,700円。まずは90分の体験カウンセリング8,500円から（コース開始で初月に全額充当）。">
 <style>
-:root {
-  --pink: #E4A0A0; /* 優しいアースピンク */
-  --pink-deep: #D47A7A;
-  --pink-soft: #FFF0F0;
-  --mint: #9BB5A4; /* 沖縄の自然を感じるアースグリーン */
-  --mint-soft: #EBF2EE;
-  --lav: #C5B6E0; /* 心を落ち着かせるラベンダー */
-  --lav-soft: #F3EFF9;
-  --yellow: #F3C68F;
-  --yellow-soft: #FAF2E8;
-  --cream: #FFF9F6; /* 薄い桜ベージュ（背景メイン） */
-  --white: #FFFFFF;
-  --ink: #443A37; /* 柔らかいダークブラウン */
-  --ink-soft: #7A6F6B;
-  --line-green: #06c755;
-  --line-deep: #05a648;
-  --radius: 24px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 74px;
-}
-
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 400;
-  color: var(--ink);
-  background: var(--cream);
-  line-height: 2;
-  letter-spacing: .06em;
-  overflow-x: hidden;
-}
-
-h1, h2, h3, .maru {
-  font-family: 'Zen Maru Gothic', sans-serif;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-section {
-  padding: 100px 20px;
-}
-
-.inner {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-/* ===== ナビゲーション ===== */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 249, 246, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #F3E6E0;
-}
-
-.nav-inner {
-  max-width: 1040px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 20px;
-}
-
-.nav-logo {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink);
-}
-
-.nav-logo::before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--pink);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  list-style: none;
-  font-size: .88rem;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: var(--pink-deep);
-}
-
-.nav-cta {
-  background: linear-gradient(135deg, var(--line-green), var(--line-deep));
-  color: #fff !important;
-  padding: 10px 22px;
-  border-radius: 99px;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.2);
-}
-
-.nav-burger {
-  display: none;
-  background: none;
-  border: none;
-  width: 44px;
-  height: 44px;
-  position: relative;
-  cursor: pointer;
-}
-
-.nav-burger span {
-  position: absolute;
-  left: 10px;
-  width: 24px;
-  height: 2.5px;
-  background: var(--ink);
-  border-radius: 2px;
-  transition: .3s;
-}
-
-.nav-burger span:nth-child(1) { top: 14px; }
-.nav-burger span:nth-child(2) { top: 21px; }
-.nav-burger span:nth-child(3) { top: 28px; }
-
-.nav-burger.open span:nth-child(1) { top: 21px; transform: rotate(45deg); }
-.nav-burger.open span:nth-child(2) { opacity: 0; }
-.nav-burger.open span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
-
-@media(max-width: 860px) {
-  .nav-burger {
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    gap: 0;
-    background: rgba(255, 249, 246, 0.98);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .35s ease;
-    border-bottom: 1px solid #F3E6E0;
-  }
-  .nav-links.open {
-    max-height: 480px;
-  }
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-    padding: 14px 0;
-    border-top: 1px solid #F5EAE4;
-  }
-  .nav-cta {
-    display: inline-block;
-    margin: 6px 0;
-  }
-}
-
-/* ===== ヒーローセクション ===== */
-.hero {
-  background: var(--cream);
-  padding: 60px 20px 80px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-inner {
-  max-width: 1040px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.hero-badges span {
-  font-size: .78rem;
-  font-weight: 700;
-  background: var(--white);
-  border: 1.5px solid var(--pink-soft);
-  color: var(--pink-deep);
-  padding: 5px 14px;
-  border-radius: 99px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  line-height: 1.5;
-  letter-spacing: .06em;
-  margin-bottom: 24px;
-  color: var(--ink);
-}
-
-.hero h1 .mk {
-  background: linear-gradient(transparent 60%, var(--yellow-soft) 60%);
-}
-
-.hero h1 .pk {
-  color: var(--pink-deep);
-}
-
-.hero-lead {
-  font-size: 1.05rem;
-  color: var(--ink);
-  margin-bottom: 16px;
-}
-
-.hero-note {
-  font-size: .86rem;
-  color: var(--ink-soft);
-  margin-bottom: 32px;
-}
-
-.hero-visual {
-  position: relative;
-}
-
-.hero-circle {
-  position: absolute;
-  width: 440px;
-  height: 440px;
-  border-radius: 50%;
-  background: var(--pink-soft);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-.hero-photo {
-  position: relative;
-  z-index: 1;
-  border-radius: var(--radius);
-  box-shadow: 0 20px 48px rgba(217, 86, 119, 0.12);
-  width: 100%;
-}
-
-.hero-dots {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  gap: 8px;
-  bottom: -16px;
-  left: 24px;
-}
-
-.hero-dots i {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-}
-
-.hero-dots i:nth-child(1) { background: var(--pink); }
-.hero-dots i:nth-child(2) { background: var(--mint); }
-.hero-dots i:nth-child(3) { background: var(--lav); }
-.hero-dots i:nth-child(4) { background: var(--yellow); }
-
-/* ===== CTA ボタン ===== */
-.cta-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--line-green), var(--line-deep));
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 18px 46px;
-  border-radius: 99px;
-  box-shadow: 0 10px 24px rgba(6, 199, 85, 0.25);
-  transition: .25s;
-  font-family: 'Zen Maru Gothic', sans-serif;
-  letter-spacing: .08em;
-  text-align: center;
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(6, 199, 85, 0.35);
-}
-
-.cta-btn::after {
-  content: " →";
-  font-weight: 700;
-}
-
-.cta-under {
-  font-size: .84rem;
-  color: var(--ink-soft);
-  margin-top: 14px;
-}
-
-/* ===== 帯 (Strip) ===== */
-.strip {
-  background: var(--pink);
-  padding: 24px 20px;
-}
-
-.strip .inner {
-  display: flex;
-  justify-content: center;
-  gap: 36px;
-  flex-wrap: wrap;
-}
-
-.strip span {
-  color: #fff;
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 700;
-  letter-spacing: .12em;
-  font-size: 1.05rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.strip span::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #fff;
-  opacity: .85;
-}
-
-/* ===== セクション装飾 ===== */
-.sec-label {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
-}
-
-.sec-label .num {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: .95rem;
-  color: #fff;
-  background: var(--pink);
-  border-radius: 10px;
-  padding: 4px 14px;
-}
-
-.sec-label .txt {
-  font-size: .85rem;
-  letter-spacing: .2em;
-  color: var(--ink-soft);
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-h2 .pk { color: var(--pink-deep); }
-h2 .mt { color: var(--mint); }
-
-/* ===== 01 共感 (nayami) ===== */
-.checks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 44px;
-}
-
-.check {
-  background: var(--white);
-  border: 1.5px solid var(--pink-soft);
-  border-radius: 18px;
-  padding: 18px 22px;
-  font-size: .95rem;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  line-height: 1.8;
-}
-
-.check::before {
-  content: "";
-  flex: 0 0 10px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--pink);
-  margin-top: 12px;
-}
-
-.notfault {
-  background: var(--pink-soft);
-  border-radius: var(--radius);
-  padding: 38px 30px;
-  text-align: center;
-}
-
-.notfault p {
-  font-size: 1.05rem;
-  color: var(--ink);
-}
-
-.notfault strong {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 1.35rem;
-  font-weight: 900;
-  color: var(--pink-deep);
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* ===== 02 産後の真実 (truth) ===== */
-.bg-mint {
-  background: var(--mint-soft);
-}
-
-.talk {
-  max-width: 720px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-}
-
-.talk p {
-  margin-bottom: 28px;
-}
-
-.talk .big {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 1.45rem;
-  line-height: 1.8;
-  color: #557A63;
-  margin: 36px 0;
-  text-align: center;
-}
-
-/* ===== 03 ゆいどころ式・3つの柱 (approach) ===== */
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 20px;
-}
-
-.feature {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 36px 28px;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(68, 58, 55, 0.03);
-  border: 1px solid #F5EAE4;
-}
-
-.feature:nth-child(1) { border-top: 5px solid var(--pink); }
-.feature:nth-child(2) { border-top: 5px solid var(--lav); }
-.feature:nth-child(3) { border-top: 5px solid var(--yellow); }
-
-.feature .f-ico {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--cream);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.feature h3 {
-  font-size: 1.15rem;
-  font-weight: 900;
-  margin-bottom: 14px;
-}
-
-.feature p {
-  font-size: .9rem;
-  line-height: 1.9;
-  color: var(--ink-soft);
-}
-
-.feature-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #fff;
-  padding: 2px 10px;
-  border-radius: 4px;
-  margin-bottom: 8px;
-}
-.feature:nth-child(1) .feature-tag { background: var(--pink); }
-.feature:nth-child(2) .feature-tag { background: var(--lav); }
-.feature:nth-child(3) .feature-tag { background: var(--yellow); }
-
-/* ===== 04 Oto-Note ＆ AI伴走 (otonote) ===== */
-.bg-lav {
-  background: var(--lav-soft);
-}
-
-.otonote-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.otonote-visual {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: 0 20px 48px rgba(68, 58, 55, 0.08);
-  border: 1px solid #F3E6E0;
-  padding: 30px;
-}
-
-.chat-bubble-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.chat-bubble {
-  max-width: 85%;
-  padding: 14px 18px;
-  border-radius: 18px;
-  font-size: .88rem;
-  line-height: 1.7;
-}
-
-.chat-bubble.user {
-  align-self: flex-end;
-  background: var(--lav-soft);
-  color: var(--ink);
-  border-bottom-right-radius: 4px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.chat-bubble.ai {
-  align-self: flex-start;
-  background: var(--mint-soft);
-  color: var(--ink);
-  border-bottom-left-radius: 4px;
-  border: 1px solid #D6E8DF;
-}
-
-.chat-bubble.otonote {
-  align-self: center;
-  background: var(--pink-soft);
-  color: var(--pink-deep);
-  border: 1px solid #FCE4E4;
-  font-weight: 700;
-  text-align: center;
-  width: 90%;
-  font-size: 0.85rem;
-}
-
-.audio-icon {
-  width: 24px;
-  height: 24px;
-  background: var(--lav);
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-}
-
-.audio-icon::after {
-  content: "🔊";
-  font-size: 0.8rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.otonote-txt .catch {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 1.35rem;
-  color: var(--pink-deep);
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.otonote-txt p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-/* ===== 05 3ヶ月後の変化 (changes) ===== */
-.changes-box {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 44px 40px;
-  border: 1px solid #F5EAE4;
-  box-shadow: 0 12px 36px rgba(68, 58, 55, 0.02);
-}
-
-.changes-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.change-col h3 {
-  font-size: 1.2rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.change-col.c1 h3 { color: var(--mint); }
-.change-col.c2 h3 { color: var(--pink-deep); }
-
-.change-col h3::before {
-  content: "✔";
-  display: inline-flex;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: #fff;
-}
-.change-col.c1 h3::before { background: var(--mint); }
-.change-col.c2 h3::before { background: var(--pink); }
-
-.change-col ul {
-  list-style: none;
-}
-
-.change-col li {
-  font-size: .95rem;
-  padding: 10px 0;
-  border-bottom: 1px dashed #F5EAE4;
-  line-height: 1.8;
-}
-
-/* ===== 06 ロードマップ (roadmap) ===== */
-.roadmap-flow {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 30px;
-}
-
-.roadmap-step {
-  background: var(--white);
-  border-radius: var(--radius);
-  border: 1.5px solid #F3E6E0;
-  padding: 36px 28px;
-  position: relative;
-}
-
-.roadmap-step::after {
-  content: "→";
-  position: absolute;
-  right: -16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-  color: var(--pink);
-  z-index: 10;
-}
-.roadmap-step:last-child::after { content: ""; }
-
-.roadmap-step .step-tag {
-  position: absolute;
-  top: -16px;
-  left: 28px;
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  color: #fff;
-  padding: 4px 18px;
-  border-radius: 99px;
-  font-size: .85rem;
-}
-.roadmap-step:nth-child(1) .step-tag { background: var(--pink); }
-.roadmap-step:nth-child(2) .step-tag { background: var(--mint); }
-.roadmap-step:nth-child(3) .step-tag { background: var(--lav); }
-
-.roadmap-step h3 {
-  font-size: 1.15rem;
-  font-weight: 900;
-  margin: 12px 0 10px;
-}
-
-.roadmap-step p {
-  font-size: .88rem;
-  line-height: 1.9;
-  color: var(--ink-soft);
-}
-
-.roadmap-step ul {
-  list-style: none;
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px dashed #F5EAE4;
-}
-
-.roadmap-step li {
-  font-size: 0.8rem;
-  color: var(--ink);
-  line-height: 1.7;
-  padding-left: 14px;
-  position: relative;
-  margin-bottom: 6px;
-}
-.roadmap-step li::before {
-  content: "▫";
-  position: absolute;
-  left: 0;
-  color: var(--ink-soft);
-}
-
-@media(max-width: 860px) {
-  .roadmap-flow {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .roadmap-step::after {
-    content: "↓";
-    bottom: -28px;
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-/* ===== 07 料金・オファー (offer) ===== */
-.offer-box {
-  background: var(--white);
-  border-radius: var(--radius);
-  border: 2.5px solid var(--pink);
-  box-shadow: 0 20px 48px rgba(228, 160, 160, 0.15);
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 50px 40px;
-  position: relative;
-  text-align: center;
-}
-
-.offer-label {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--pink);
-  color: #fff;
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: .95rem;
-  padding: 6px 30px;
-  border-radius: 99px;
-  white-space: nowrap;
-}
-
-.offer-box h3 {
-  font-size: 1.6rem;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-
-.offer-sub {
-  font-size: .95rem;
-  color: var(--ink-soft);
-  margin-bottom: 30px;
-}
-
-.offer-price {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 2.6rem;
-  color: var(--pink-deep);
-  line-height: 1.2;
-}
-
-.offer-price small {
-  font-size: 1.1rem;
-  color: var(--ink-soft);
-  font-weight: 500;
-}
-
-.offer-price-detail {
-  font-size: .88rem;
-  color: var(--ink-soft);
-  margin-bottom: 36px;
-  background: var(--cream);
-  display: inline-block;
-  padding: 4px 18px;
-  border-radius: 99px;
-}
-
-.offer-list {
-  text-align: left;
-  max-width: 460px;
-  margin: 0 auto 36px;
-  list-style: none;
-}
-
-.offer-list li {
-  font-size: .95rem;
-  padding: 10px 0 10px 30px;
-  position: relative;
-  border-bottom: 1px dashed #F5EAE4;
-  line-height: 1.8;
-}
-
-.offer-list li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 18px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--mint-soft);
-}
-
-.offer-list li::after {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 22px;
-  width: 6px;
-  height: 4px;
-  border-left: 2px solid #2f8d7b;
-  border-bottom: 2px solid #2f8d7b;
-  transform: rotate(-45deg);
-}
-
-.offer-list li.gift::before {
-  background: var(--yellow-soft);
-}
-.offer-list li.gift::after {
-  border-color: #c78f16;
-}
-
-.limit-box {
-  max-width: 680px;
-  margin: 44px auto 0;
-  background: var(--yellow-soft);
-  border: 1.5px solid var(--yellow);
-  border-radius: var(--radius);
-  padding: 30px 34px;
-  text-align: center;
-  font-size: .95rem;
-}
-
-.limit-box strong {
-  color: var(--pink-deep);
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 1.1rem;
-}
-
-/* ===== 08 プロフィール (profile) ===== */
-.profile {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.profile-photo img {
-  box-shadow: 0 16px 40px rgba(68, 58, 55, 0.1);
-  width: 100%;
-}
-
-.profile-txt p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.profile-txt .name {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 1.25rem;
-  margin-bottom: 4px;
-}
-
-.profile-txt .shikaku {
-  font-size: .85rem;
-  color: var(--ink-soft);
-  margin-bottom: 24px;
-}
-
-.yakusoku {
-  background: var(--mint-soft);
-  border-radius: var(--radius);
-  padding: 34px;
-  margin-top: 40px;
-}
-
-.yakusoku h3 {
-  font-size: 1.1rem;
-  font-weight: 900;
-  margin-bottom: 16px;
-  color: #4A6E56;
-}
-
-.yakusoku ul {
-  list-style: none;
-}
-
-.yakusoku li {
-  font-size: .95rem;
-  padding: 8px 0 8px 28px;
-  position: relative;
-  line-height: 1.8;
-}
-
-.yakusoku li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 16px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #fff;
-  border: 3px solid var(--mint);
-}
-
-/* ===== 09 推薦・実績 (social) ===== */
-.social-proof {
-  background: var(--white);
-}
-
-.proofs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.proof-card {
-  background: var(--cream);
-  border-radius: var(--radius);
-  padding: 34px;
-  border: 1px solid #F5EAE4;
-}
-
-.proof-card h4 {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 1.05rem;
-  margin-bottom: 8px;
-  color: var(--ink);
-}
-
-.proof-sub {
-  font-size: 0.8rem;
-  color: var(--ink-soft);
-  margin-bottom: 16px;
-  border-bottom: 1px dashed #E5D5CD;
-  padding-bottom: 10px;
-}
-
-.proof-card p {
-  font-size: 0.9rem;
-  line-height: 1.85;
-}
-
-/* ===== 10 体験カウンセリング (taiken) ===== */
-.taiken-box {
-  background: var(--pink-soft);
-  border-radius: var(--radius);
-  padding: 50px 40px;
-  margin-top: 30px;
-}
-
-.taiken-flow {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin: 36px 0;
-}
-
-.tf {
-  background: var(--white);
-  border-radius: 20px;
-  padding: 26px 18px;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(217, 86, 119, 0.03);
-}
-
-.tf .tf-num {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  color: var(--pink-deep);
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}
-
-.tf p {
-  font-size: .85rem;
-  line-height: 1.8;
-}
-
-.taiken-price {
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.taiken-price .tp {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 2.2rem;
-  color: var(--pink-deep);
-}
-
-.taiken-price small {
-  font-size: .9rem;
-  color: var(--ink-soft);
-  display: block;
-  margin-top: 4px;
-}
-
-.taiken-note {
-  text-align: center;
-  margin: 28px 0 34px;
-  font-size: .98rem;
-  line-height: 1.9;
-}
-
-/* ===== 11 FAQ ===== */
-details {
-  background: var(--white);
-  border: 1.5px solid #F3E6E0;
-  border-radius: 18px;
-  margin-bottom: 16px;
-  overflow: hidden;
-}
-
-summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 20px 24px;
-  font-weight: 700;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  user-select: none;
-}
-
-summary::before {
-  content: "Q";
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  color: #fff;
-  background: var(--pink);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  flex: 0 0 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .9rem;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-details p {
-  padding: 0 24px 22px 70px;
-  font-size: .95rem;
-  line-height: 1.9;
-  color: var(--ink-soft);
-}
-
-/* ===== 最終CTA・フッター ===== */
-.final {
-  background: linear-gradient(160deg, var(--pink), #D98D7B);
-  text-align: center;
-  color: #fff;
-}
-
-.final h2 {
-  color: #fff;
-  margin-bottom: 16px;
-}
-
-.final p {
-  margin-bottom: 34px;
-  font-size: 1.02rem;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.final .cta-btn {
-  background: var(--white);
-  color: var(--line-deep);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-}
-
-.final .cta-under {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-footer {
-  background: #443A37;
-  color: #E6DAD5;
-  padding: 50px 20px;
-  font-size: .88rem;
-  text-align: center;
-  line-height: 2.2;
-}
-
-footer .f-logo {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 1.25rem;
-  color: #fff;
-  margin-bottom: 12px;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* ===== レスポンシブ崩れ対策 ===== */
-@media(max-width: 860px) {
-  .hero-inner, .otonote-wrap, .profile, .proofs, .changes-grid {
-    grid-template-columns: 1fr;
-  }
-  .features {
-    grid-template-columns: 1fr;
-  }
-  .taiken-flow {
-    grid-template-columns: 1fr 1fr;
-  }
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
-  .checks {
-    grid-template-columns: 1fr;
-  }
-  section {
-    padding: 70px 18px;
-  }
-  .hero-circle {
-    width: 320px;
-    height: 320px;
-  }
-  .taiken-box {
-    padding: 30px 20px;
-  }
-}
-
-@media(max-width: 480px) {
-  .taiken-flow {
-    grid-template-columns: 1fr;
-  }
-  .offer-box {
-    padding: 40px 20px;
-  }
-}
+/* pop.css（ゆいどころ特集ページ共通スタイル）をそのまま取り込み */
+/* ゆいどころ 特集ページ共通スタイル
+   ── スマホ優先。丸み・手描き・大きな写真・横スライド。
+   色はブランド基準（えんじ・生成り・セージ・やさしい桃・墨色）から出ない。 */
+
+:root{
+  --enji:#933E44;
+  --kinari:#F9E8CE;
+  --sage:#99A084;
+  --momo:#EAAC97;
+  --sumi:#37322D;
+  --paper:#FFFBF3;
+  --card:#FFFFFF;
+  --line:#E7DCC8;
+  --ink-soft:#6A6157;
+  --r-lg:28px;
+  --r-md:20px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;overflow-x:hidden;}
+body{
+  margin:0;overflow-x:hidden;background:var(--paper);color:var(--sumi);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans CJK JP","Noto Sans JP",sans-serif;
+  font-size:16px;line-height:1.95;letter-spacing:.02em;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:84px; /* 下部の固定CTA分 */
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+
+/* ---------- レイアウト ---------- */
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 22px;}
+.sec{padding:52px 0;}
+.sec.tight{padding:34px 0;}
+.sec.cream{background:var(--kinari);}
+.sec.white{background:#fff;}
+
+/* ---------- ヘッダー ---------- */
+.hd{position:sticky;top:0;z-index:50;background:rgba(255,251,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.hd-in{max-width:760px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:10px;}
+.hd-mark{width:34px;height:34px;border-radius:50%;background:var(--enji);color:#fff;display:grid;place-items:center;font-size:15px;flex:none;}
+.hd-name{font-size:15px;line-height:1.3;}
+.hd-name small{display:block;font-size:11px;color:var(--ink-soft);letter-spacing:.1em;}
+.hd-line{margin-left:auto;background:#06C755;color:#fff;text-decoration:none;font-size:13px;font-weight:700;padding:9px 15px;border-radius:999px;white-space:nowrap;}
+
+/* ---------- 見出し ---------- */
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:.18em;color:var(--enji);background:#fff;border:1px solid var(--momo);border-radius:999px;padding:5px 16px;margin:0 0 14px;}
+h1{font-size:clamp(25px,6.6vw,40px);line-height:1.45;margin:0 0 14px;font-weight:700;letter-spacing:.01em;}
+h2{font-size:clamp(23px,5.6vw,30px);line-height:1.5;margin:0 0 12px;font-weight:700;}
+h3{font-size:19px;line-height:1.55;margin:0 0 6px;font-weight:700;}
+.lead{font-size:16px;color:var(--ink-soft);margin:0;}
+.mark{background:linear-gradient(transparent 62%,rgba(234,172,151,.6) 62%);}
+
+/* 手描きの波線 */
+.squiggle{display:block;width:104px;height:11px;margin:14px 0 0;overflow:visible;}
+.squiggle path{fill:none;stroke:var(--momo);stroke-width:3.4;stroke-linecap:round;}
+.center{text-align:center;}
+.center .squiggle{margin:14px auto 0;}
+
+/* ---------- 手描きの飾り ---------- */
+.blob{position:absolute;border-radius:46% 54% 58% 42%/52% 44% 56% 48%;opacity:.5;pointer-events:none;}
+.dot-row{display:flex;gap:7px;justify-content:center;margin:0 0 12px;}
+.dot-row i{width:7px;height:7px;border-radius:50%;background:var(--momo);display:block;}
+.dot-row i:nth-child(2){background:var(--sage);}
+.dot-row i:nth-child(3){background:var(--enji);opacity:.6;}
+
+/* ---------- 写真 ---------- */
+.photo-full{width:100vw;margin-left:calc(50% - 50vw);}
+.photo-full img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:0;}
+.photo-round{border-radius:var(--r-lg);overflow:hidden;}
+.photo-round img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.circle{width:clamp(150px,44vw,210px);aspect-ratio:1/1;border-radius:50%;object-fit:cover;margin:0 auto;}
+.cap{font-size:13px;color:var(--ink-soft);text-align:center;margin:10px 0 0;}
+
+/* ---------- カード ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 20px;}
+.card + .card{margin-top:16px;}
+.pill{display:inline-block;font-size:12px;letter-spacing:.1em;color:#fff;background:var(--sage);border-radius:999px;padding:4px 13px;}
+.pill.enji{background:var(--enji);}
+.price{font-size:30px;font-weight:700;color:var(--enji);line-height:1.2;}
+.price small{font-size:14px;font-weight:400;color:var(--ink-soft);}
+
+/* ---------- 横スライド ---------- */
+.slider{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+  width:100vw;margin-left:calc(50% - 50vw);padding:4px 22px 16px;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.slider::-webkit-scrollbar{display:none;}
+.slider.auto{scroll-behavior:auto;}
+.slide{flex:0 0 74%;max-width:280px;scroll-snap-align:center;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;}
+.slide img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#F4EFE4;}
+.slide .b{padding:13px 15px 16px;}
+.slide .nm{font-size:15px;line-height:1.5;margin:0 0 3px;font-weight:700;}
+.slide .nm small{display:block;font-weight:400;font-size:12px;color:var(--ink-soft);}
+.slide .sz{font-size:12px;color:var(--ink-soft);margin:0 0 6px;}
+.slide .pr{font-size:18px;font-weight:700;margin:0;}
+.swipe-hint{font-size:12.5px;color:var(--ink-soft);text-align:right;margin:0 0 4px;}
+
+/* ---------- ステップ ---------- */
+.steps{margin:22px 0 0;padding:0;list-style:none;}
+.steps li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--line);}
+.steps li:last-child{border-bottom:none;}
+.steps .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--kinari);color:var(--enji);
+  display:grid;place-items:center;font-size:13px;font-weight:700;}
+.steps .ph{flex:none;width:66px;height:66px;border-radius:50%;object-fit:cover;}
+.steps h3{margin:0 0 2px;font-size:17px;}
+.steps p{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.85;}
+
+/* ---------- 箇条書き ---------- */
+.dots{margin:16px 0 0;padding:0;list-style:none;}
+.dots li{position:relative;padding-left:20px;margin-bottom:9px;font-size:15px;line-height:1.9;}
+.dots li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:8px;border-radius:50%;background:var(--momo);}
+
+/* ---------- CTA ---------- */
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:#06C755;color:#fff;text-decoration:none;font-weight:700;font-size:17px;
+  padding:16px 30px;border-radius:999px;box-shadow:0 6px 18px rgba(6,199,85,.28);}
+.cta-fix{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,251,243,.96);
+  backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:11px 18px calc(11px + env(safe-area-inset-bottom));}
+.cta-fix .btn-line{width:100%;max-width:520px;margin:0 auto;display:flex;}
+
+/* ---------- フッター ---------- */
+.ft{background:#33372F;color:#EFEAE0;padding:34px 0 30px;margin-top:10px;}
+.ft .wrap{max-width:760px;}
+.ft .nm{font-size:17px;font-weight:700;margin:0 0 4px;}
+.ft p{font-size:13.5px;line-height:1.9;color:#C9C4B7;margin:0 0 14px;}
+.ft dl{display:grid;grid-template-columns:4.2em 1fr;gap:4px 10px;font-size:13.5px;margin:0 0 16px;}
+.ft dt{color:#9FA294;}
+.ft dd{margin:0;}
+.ft .nav{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:13.5px;padding-top:14px;border-top:1px solid #4A4E45;}
+.ft .nav a{text-decoration:none;}
+.ft .cp{font-size:11.5px;color:#8E9184;margin:16px 0 0;}
+
+@media(min-width:760px){
+  body{font-size:17px;}
+  .photo-full{width:100%;margin-left:0;border-radius:var(--r-lg);overflow:hidden;}
+  .photo-full img{aspect-ratio:16/8;}
+  .slider{width:100%;margin-left:0;padding-left:0;padding-right:0;}
+  .slide{flex:0 0 240px;}
+}
+
+
+/* ---------- ヘッダーのホーム導線（2026-08-11 追加） ----------
+   ロゴ全体を公式サイトのホームへのリンクにし、隣に「ホーム」ボタンを常設。
+   .hd はもともと position:sticky なので、スクロール中もずっと出ています。 */
+.hd-home{ display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit; }
+.hd-home:hover{ opacity:.72; }
+/* 名前のかたまりが右側を押し出す。ホームボタンの有無にかかわらず
+   LINEボタンが右端に来るようにするため（制作実績ページはホームなし）。 */
+.hd-in > .hd-home,
+.hd-in > .hd-name{ margin-right:auto; }
+.hd-back{
+  flex:none;white-space:nowrap;text-decoration:none;
+  font-size:13px;font-weight:700;color:var(--enji);
+  background:var(--card);border:1px solid var(--line);
+  padding:8px 14px;border-radius:999px;
+}
+.hd-back:hover{ background:var(--kinari); }
+.hd-line{ margin-left:8px; }
+@media (max-width:400px){
+  .hd-in{ gap:8px;padding-left:12px;padding-right:12px; }
+  .hd-name small{ display:none; }
+  .hd-back{ font-size:12px;padding:7px 11px; }
+  .hd-line{ font-size:12px;padding:8px 12px;margin-left:6px; }
+}
+
+/* ヘッダーのスクロール追従を効かせる（2026-08-11）
+   html/body の overflow-x:hidden は横スクロールを止める代わりに
+   position:sticky を無効にしてしまう。clip なら横スクロールだけ止めて
+   追従は生きる。1行目の hidden は clip 非対応の古い端末向けの保険。 */
+html{ overflow-x:hidden; overflow-x:clip; }
+body{ overflow-x:hidden; overflow-x:clip; }
+</style>
+<style>
+  .quote{flex:0 0 76%;max-width:290px;scroll-snap-align:center;background:#fff;border:1px solid var(--line);
+    border-radius:var(--r-md);padding:20px 18px;font-size:16px;line-height:1.9;}
+  .quote b{color:var(--enji);}
+  .m3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-top:18px;}
+  .m3 div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 8px;text-align:center;}
+  .m3 b{display:block;font-size:15px;margin-bottom:3px;}
+  .m3 span{font-size:11.5px;color:var(--ink-soft);line-height:1.6;}
+  .money{background:var(--kinari);color:var(--sumi);border:2.5px solid var(--momo);border-radius:var(--r-lg);padding:26px 22px;margin-top:16px;}
+  .money .k{font-size:13px;letter-spacing:.14em;color:var(--enji);font-weight:700;}
+  .money .v{font-size:clamp(27px,8vw,34px);font-weight:700;line-height:1.3;margin:4px 0 2px;color:var(--enji);}
+  .money .v small{display:block;font-size:15px;font-weight:400;color:var(--sumi);}
+  .money ul{margin:14px 0 0;padding-left:1.2em;font-size:15px;line-height:1.95;}
+  .money .note{font-size:13.5px;color:var(--ink-soft);margin:14px 0 0;line-height:1.85;}
+  .try{border:2px solid var(--sage);border-radius:var(--r-lg);padding:22px 20px;margin-top:16px;background:#fff;}
+  .try .amt{font-size:clamp(24px,7vw,28px);font-weight:700;color:var(--enji);margin:6px 0 4px;}
+  .pro{border:2px solid var(--enji);border-radius:var(--r-lg);padding:22px 20px;margin-top:16px;background:#fff;}
+  .pro .amt{font-size:clamp(24px,7vw,28px);font-weight:700;color:var(--enji);margin:6px 0 2px;}
+  .amt small{font-size:14px;font-weight:400;color:var(--ink-soft);}
+  .limit{display:inline-block;font-size:12px;letter-spacing:.08em;color:var(--enji);background:var(--kinari);
+    border:1px solid var(--momo);border-radius:999px;padding:4px 13px;margin-left:6px;}
+  .flow{margin:14px 0 0;padding:0;list-style:none;counter-reset:f;}
+  .flow li{position:relative;padding-left:31px;margin-bottom:9px;font-size:15px;line-height:1.8;counter-increment:f;}
+  .flow li::before{content:counter(f);position:absolute;left:0;top:.3em;width:21px;height:21px;border-radius:50%;
+    background:var(--enji);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center;line-height:1;}
+  .layer{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 18px;margin-top:14px;}
+  .layer .no{display:inline-block;font-size:12px;letter-spacing:.1em;color:#fff;background:var(--sage);
+    border-radius:999px;padding:4px 13px;}
+  .layer h3{margin:10px 0 6px;font-size:18px;}
+  .layer p{margin:0;font-size:15px;color:var(--ink-soft);}
+  .ex{margin:12px 0 0;padding:12px 14px;background:var(--paper);border-radius:14px;
+    font-size:13.5px;color:var(--ink-soft);line-height:1.9;}
+  details{border-bottom:1px dashed var(--line);padding:14px 0;}
+  summary{cursor:pointer;font-weight:700;font-size:16px;list-style:none;}
+  summary::-webkit-details-marker{display:none;}
+  summary::before{content:"＋";color:var(--enji);margin-right:8px;}
+  details[open] summary::before{content:"−";}
+  details p{margin:8px 0 0;font-size:14.5px;color:var(--ink-soft);line-height:1.9;}
+</style>
+<style id="kintsugi-repair">
+/* ══ 金継ぎ追補スタイル（naoshi planner 自動生成・2026-08-28）══
+   元の規則と同じセレクタ・同じmediaで後から上書きする。:root の変数は触らない。
+   直した行: 40・手で見る行: 17 */
+/* [contrast] 白い文字はそのまま、地を同色相で深くして比2.26→基準4.5以上（白文字×色付きの面は地を動かす） */
+.hd-line { background-color: #048237; }
+/* [contrast] コントラスト比2.72→基準4.5以上（既存色 #37322D・背景#99A084） */
+.layer .no { color: #37322D; }
+/* [contrast] 白い文字はそのまま、地を同色相で深くして比2.26→基準4.5以上（白文字×色付きの面は地を動かす） */
+.btn-line { background-color: #048237; }
+/* [contrast] コントラスト比3.78→基準4.5以上（既存色 #06C755・背景#33372F） */
+/* [font] 役割「ボタン」の 15px を近いサイズ 17px へ寄せる（25%以内・一番使われている値へ） */
+.hd-mark { font-size: 17px; }
+/* [font] 役割「ボタン」の 15px を近いサイズ 17px へ寄せる（25%以内・一番使われている値へ） */
+.hd-name { font-size: 17px; }
+/* [font] 役割「ボタン」の 13px を近いサイズ 13.5px へ寄せる（25%以内・一番使われている値へ） */
+.hd-back { font-size: 13.5px; }
+/* [font] 役割「ボタン」の 13px を近いサイズ 13.5px へ寄せる（25%以内・一番使われている値へ） */
+.hd-line { font-size: 13.5px; }
+/* [font] 役割「補足」の 14px を近いサイズ 15px へ寄せる（25%以内・一番使われている値へ） */
+.amt small { font-size: 15px; }
+/* [font] 役割「補足」の 11px を近いサイズ 12px へ寄せる（25%以内・一番使われている値へ・極小） */
+.hd-name small { font-size: 12px; }
+/* [font] 役割「その他」の 15px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+.m3 b { font-size: 16px; }
+/* [font] 役割「その他」の 13px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+.eyebrow { font-size: 16px; }
+/* [font] 役割「その他」の 13px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+.money .k { font-size: 16px; }
+/* [font] 役割「その他」の 11.5px を近いサイズ 12px へ寄せる（25%以内・一番使われている値へ・極小） */
+.m3 span { font-size: 12px; }
+/* [font] 役割「本文」の 17px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+.ft .nm { font-size: 16px; }
+/* [font] 役割「本文」の 15px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+.layer p { font-size: 16px; }
+/* [font] 役割「本文」の 15px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+.flow li { font-size: 16px; }
+/* [font] 役割「本文」の 15px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） ⚠inherited（祖先 .money ul の規則を上書き＝配下全部に効く） */
+.money ul { font-size: 16px; }
+/* [font] 役割「本文」の 15px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+.dots li { font-size: 16px; }
+/* [font] 役割「本文」の 14.5px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+.steps p { font-size: 16px; }
+/* [font] 役割「本文」の 14.5px を近いサイズ 16px へ寄せる（25%以内・一番使われている値へ） */
+details p { font-size: 16px; }
+/* [font] 役割「本文」の 13px を近いサイズ 13.5px へ寄せる（25%以内・一番使われている値へ） */
+.cap { font-size: 13.5px; }
+/* [font] 役割「本文」の 12.5px を近いサイズ 13.5px へ寄せる（25%以内・一番使われている値へ） */
+.swipe-hint { font-size: 13.5px; }
+/* [font] 役割「本文」の 11.5px を近いサイズ 13.5px へ寄せる（25%以内・一番使われている値へ・極小） */
+.ft .cp { font-size: 13.5px; }
+/* [font] 役割「h3」の 19px を近いサイズ 17px へ寄せる（25%以内・一番使われている値へ） */
+h3 { font-size: 17px; }
+/* [font] 役割「h3」の 18px を近いサイズ 17px へ寄せる（25%以内・一番使われている値へ） */
+.layer h3 { font-size: 17px; }
+/* [radius] 角丸 14px を 20px へ（8種→3） */
+.ex { border-radius: 20px; }
+/* [radius] 角丸 16px を 20px へ（8種→3） */
+.m3 div { border-radius: 20px; }
+/* [color] 似て非なる色 #FFFBF3 → #FFFFFF */
+.hd { background-color: #FFFFFF; }
+/* [color] 似て非なる色 #FFFBF3 → #FFFFFF ⚠inherited（祖先 .layer の規則を上書き＝配下全部に効く） */
+.layer { background-color: #FFFFFF; }
+/* [color] 似て非なる色 #FFFBF3 → #FFFFFF */
+.cta-fix { background-color: #FFFFFF; }
+/* [color] 似て非なる色 #EFEAE0 → #FFFFFF */
+.ft { color: #FFFFFF; }
+/* [color] 似て非なる色 #EFEAE0 → #FFFFFF ⚠split-by-bg（規則 a は a.hd-back でも効き、そこでは基準を割るので、この要素に限る） */
+footer.ft div.wrap a { color: #FFFFFF; }
+/* [color] 似て非なる色 #EFEAE0 → #FFFFFF ⚠split-by-bg（規則 a は a.hd-back でも効き、そこでは基準を割るので、この要素に限る） */
+div.wrap div.nav a:nth-child(1) { color: #FFFFFF; }
+/* [color] 似て非なる色 #EFEAE0 → #FFFFFF ⚠split-by-bg（規則 a は a.hd-back でも効き、そこでは基準を割るので、この要素に限る） */
+div.wrap div.nav a:nth-child(2) { color: #FFFFFF; }
+/* [color] 似て非なる色 #EFEAE0 → #FFFFFF ⚠split-by-bg（規則 a は a.hd-back でも効き、そこでは基準を割るので、この要素に限る） */
+div.wrap div.nav a:nth-child(3) { color: #FFFFFF; }
+/* [color] 似て非なる色 #EFEAE0 → #FFFFFF ⚠split-by-bg（規則 a は a.hd-back でも効き、そこでは基準を割るので、この要素に限る） */
+div.wrap div.nav a:nth-child(4) { color: #FFFFFF; }
+/* [color] 似て非なる色 #EFEAE0 → #FFFFFF ⚠split-by-bg（規則 a は a.hd-back でも効き、そこでは基準を割るので、この要素に限る） */
+div.wrap div.nav a:nth-child(5) { color: #FFFFFF; }
+/* [color] 似て非なる色 #8E9184 → #FFFFFF（寄せ先#99A084は床未満→既存色 #FFFFFF） */
+.ft .cp { color: #FFFFFF; }
+/* [color] 似て非なる色 #9FA294 → #FFFFFF（寄せ先#99A084は床未満→既存色 #FFFFFF） */
+.ft dt { color: #FFFFFF; }
+/* ══ 手仕事（2026-08-28）══ */
+/* [color] 似て非なる色 #33372F → #37322D（フッターの地。本文の濃色と統一） */
+.ft { background-color: #37322D; }
+/* [color] 似て非なる色 #FFFBF3(--paper) → 既存トークン #F9E8CE(--kinari) へ。白カード上の「例：」枠が地とほぼ同化していたため、パレット内の生成りで見えるように */
+.ex { background-color: #F9E8CE; }
+/* [color] 似て非なる色 #4A4E45 → #6A6157(--ink-soft)。フッター内ナビの罫線 */
+.ft .nav { border-top-color: #6A6157; }
+</style>
+<style id="kintsugi-teiban">
+/* 手順3: ガラス調（背景ぼかし）を不透明の面に。地色は追補CSSで不透明化済み */
+.hd,.cta-fix{backdrop-filter:none;-webkit-backdrop-filter:none;}
+</style>
+<style id="kintsugi-repair-add">
+/* 手順2の現地是正: .pill 白文字×薄緑(#99A084)が比2.72で床4.5未満 → 番号バッジ(.no)と同じ処方で墨色に。臙脂地の変種は白のまま */
+.pill{color:#37322D;}
+.pill.enji{color:#FFFFFF;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style id="kintsugi-shotai">
+/* 手順4③: 見出しにだけ和文書体を1つ（丸ゴシック）。本文は既定のまま */
+h1,h2,h3{font-family:'Zen Maru Gothic','Hiragino Maru Gothic ProN',sans-serif;}
 </style>
 </head>
 <body>
 
-<!-- ナビゲーション -->
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">ゆいどころ</div>
-    <button class="nav-burger" id="navBurger" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#nayami">こんな毎日に</a></li>
-      <li><a href="#approach">3つのアプローチ</a></li>
-      <li><a href="#otonote">AI伴走・オトノート</a></li>
-      <li><a href="#roadmap">3ヶ月のステップ</a></li>
-      <li><a href="#offer">プログラム内容</a></li>
-      <li><a href="#faq">よくあるご質問</a></li>
-      <li><a class="nav-cta" href="#taiken">体験を予約する</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ヒーローセクション -->
-<header class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-badges">
-        <span>女性専用</span><span>完全予約制</span><span>作業療法士の伴走サロン</span><span>沖縄・北中城</span>
-      </div>
-      <h1>産後の体は、<br><span class="mk">「戻す」</span>ものではなく<br><span class="pk">「育て直す」</span>もの。</h1>
-      <p class="hero-lead">がんばる運動はしません。<br>感覚から体を呼び覚まし、国家資格の専門家が3ヶ月間マンツーマンで寄り添うオーダーメイド回復プログラムです。</p>
-      <p class="hero-note">※施術・運動・24時間AIサポート（オトノート）すべてが含まれます。</p>
-      <a class="cta-btn" href="https://lin.ee/yCRg3GX">LINEで体験カウンセリングを予約</a>
-      <p class="cta-under">計測つき体験 90分 8,000円（税込）｜無理なお勧誘はありません</p>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-circle"></div>
-      <img class="hero-photo" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="ゆいどころのあたたかで心地よい空間イメージ">
-      <div class="hero-dots"><i></i><i></i><i></i><i></i></div>
-    </div>
+<header class="hd">
+  <div class="hd-in">
+    <a class="hd-home" href="https://www.yuidocoro.com/"><span class="hd-mark">結</span>
+    <span class="hd-name">ゆいどころ<small>女性の為の整体</small></span></a>
+    <a class="hd-back" href="https://www.yuidocoro.com/">ホーム</a>
+        <a class="hd-line" href="https://lin.ee/yCRg3GX" target="_blank" rel="noopener">LINEで相談</a>
   </div>
 </header>
 
-<!-- 帯 -->
-<div class="strip">
-  <div class="inner">
-    <span>自分を責めない</span><span>きつくない</span><span>体感が出る</span><span>24時間ひとりぼっちにしない</span>
-  </div>
-</div>
-
-<!-- 01 こんな毎日に -->
-<section id="nayami">
-  <div class="inner">
-    <div class="sec-label"><span class="num">01</span><span class="txt">こんな毎日に、心あたりはありませんか</span></div>
-    <h2>自分のことは、<br>いつも<span class="pk">いちばん後回し</span>。</h2>
-    <div class="checks">
-      <div class="check">抱っこと家事で、肩も腰もずっと張ったままで休めない。。</div>
-      <div class="check">その場しのぎのマッサージに行っても、数日で元に戻ってしまう。。</div>
-      <div class="check">自分のケアにお金と時間を使うことに、何だか罪悪感がある。。</div>
-      <div class="check">いつもイライラして家族に当たってしまい、夜に一人で反省してしまう。。</div>
-      <div class="check">「これくらい皆やってるし」と、自分のつらさにフタをしてしまう。。</div>
-      <div class="check">産後、自分の体型や姿勢が変わってしまって、鏡を見るのが寂しい。。</div>
-    </div>
-    <div class="notfault">
-      <p><strong>それは、あなたのがんばりが足りないからではありません。</strong><br>
-      毎日それだけ全力で動き、大切な家族を支えて、それでも自分を後回しにできるほど<br>がんばってきた優しい体だからこそ、いま、サインを出しているだけなんです。</p>
-    </div>
+<!-- ヒーロー -->
+<section class="sec tight" style="position:relative;overflow:hidden;">
+  <span class="blob" style="width:220px;height:220px;background:var(--kinari);top:-80px;left:-70px;"></span>
+  <span class="blob" style="width:130px;height:130px;background:rgba(153,160,132,.25);bottom:-45px;right:-40px;"></span>
+  <div class="wrap center" style="position:relative;">
+    <div class="dot-row"><i></i><i></i><i></i></div>
+    <span class="eyebrow">3ヶ月伴走コース</span>
+    <h1>あなたの目標に合わせて、<br><span class="mark">3ヶ月、伴走します。</span></h1>
+    <svg class="squiggle" viewBox="0 0 104 11"><path d="M2 7c8-7 16 7 24 0s16 7 24 0 16 7 24 0 16 7 24 0"/></svg>
+    <p class="lead" style="margin-top:16px;">産後の体で叶えたいことは、ひとりずつ違います。だから最初の90分で、あなたの目標をお聞きして、いまの体を測るところから始めます。</p>
   </div>
 </section>
 
-<!-- 02 産後の真実 -->
-<section class="bg-mint">
-  <div class="inner">
-    <div class="sec-label"><span class="num">02</span><span class="txt">産後の体の、ほんとうの話</span></div>
-    <h2>産後は、<span class="mt">筋力だけ</span>の問題ではありません。</h2>
-    <div class="talk">
-      <p>妊娠と出産で、骨格も重心も劇的に変わります。<br>このとき変わるのは筋肉の衰えだけでなく、脳の中にある<strong>「自分の体の地図（ボディーマップ）」</strong>も少しずつズレてしまっているんです。</p>
-      <p>だから、きついスクワットや腹筋をがんばってもなかなか戻らない。。<br>あなたのアプローチ方法が間違っていたのではなく、**「アプローチする場所」が違っていただけ**なんです。</p>
-      <p class="big">必要なのは、鍛えることより、<br>体の感覚を「思い出す」こと。</p>
-      <p>視線の向き、足裏の感覚、呼吸の深さ。そうした小さな感覚のスイッチを入れるだけで、体は驚くほど軽やかに動き出します。施術やエクササイズのあと、あぐらが急にラクになったり、前屈がベタッとついたり。<br>「魔法みたい」という声をよくいただきますが、解剖学と脳科学に基づいた、ちゃんとした体の仕組みのお話です。</p>
-    </div>
+<section class="sec tight">
+  <div class="wrap">
+    <div class="photo-full"><img src="images/yuidocoro_counseling.jpg" alt="お話をうかがっている様子"></div>
+    <p class="cap">まずは90分。目標をお聞きするところから始めます。</p>
   </div>
 </section>
 
-<!-- 03 ゆいどころ式・3つの柱 -->
-<section id="approach">
-  <div class="inner">
-    <div class="sec-label"><span class="num">03</span><span class="txt">ゆいどころ式・3つのアプローチ</span></div>
-    <h2>ゆるめて、思い出して、<span class="pk">日常になじませる</span>。</h2>
-    <div class="features">
-      <div class="feature">
-        <div class="feature-tag">月2回</div>
-        <div class="f-ico">💆</div>
-        <h3>個別オーダーメイド施術</h3>
-        <p>作業療法士として1万人以上の体に向き合ってきた経験から、筋膜と「体の地図」の両方にアプローチ。ボロボロになった全身を心地よく緩め、骨盤の位置を本来の場所へと整えます。（1回90分）</p>
-      </div>
-      <div class="feature">
-        <div class="feature-tag">週1回</div>
-        <div class="f-ico">🏃</div>
-        <h3>少人数あそびエクササイズ</h3>
-        <p>定員6名。きついトレーニングは一切行いません。「感覚統合あそび」を取り入れた、あそぶように動いているだけで、日常生活の重心移動や抱っこが自然と軽くなる優しいグループワークです。（1回60分）</p>
-      </div>
-      <div class="feature">
-        <div class="feature-tag">24時間</div>
-        <div class="f-ico">📱</div>
-        <h3>カルテ連動AI伴走＆Oto-Note</h3>
-        <p>LINEからいつでも相談可能。なつきが分析した「今のあなたのカルテ」と連動し、その日に合わせたセルフケアをAIがカスタマイズして返信. 声でモヤモヤを吐き出す機能（オトノート）も完備しています。</p>
-      </div>
-    </div>
+<!-- 目標 -->
+<section class="sec cream">
+  <div class="wrap">
+    <span class="eyebrow">たとえば、こんな目標から</span>
+    <h2>「痛みを取る」の、<br>その先へ。</h2>
+    <svg class="squiggle" viewBox="0 0 104 11"><path d="M2 7c8-7 16 7 24 0s16 7 24 0 16 7 24 0 16 7 24 0"/></svg>
+    <p class="lead" style="margin-top:14px;">来てくださる方が実際に口にされるのは、症状の名前ではなく、暮らしの中の場面でした。</p>
+    <p class="swipe-hint" style="margin-top:18px;">ゆっくり流れます（指でも動かせます）</p>
+  </div>
+  <div class="slider auto" id="goalSlider">
+    <div class="quote">「抱っこしても<b>腰が痛くならない</b>体になりたい」</div>
+    <div class="quote">「<b>夕方まで体力がもつ</b>ようになりたい」</div>
+    <div class="quote">「くしゃみのときに<b>あわてなくなりたい</b>」</div>
+    <div class="quote">「また<b>走れる体</b>に戻りたい」</div>
+    <div class="quote">「<b>あぐらがラクに</b>かけるようになりたい」</div>
+  </div>
+  <div class="wrap">
+    <p style="margin-top:6px;font-size:16px;">その日の痛みを軽くすることはできても、<b>暮らしの場面が変わるには、時間がかかります。</b>3ヶ月というのは、そのための長さです。</p>
   </div>
 </section>
 
-<!-- 04 Oto-Note ＆ AI伴走 -->
-<section id="otonote" class="bg-lav">
-  <div class="inner">
-    <div class="sec-label"><span class="num">04</span><span class="txt">いつでも, あなたのそばに</span></div>
-    <h2>24時間, あなたをひとりぼっちにしない。<br>「ゆいどころAI ✖ Oto-Note」の安心。</h2>
-    <div class="otonote-wrap">
-      <div class="otonote-visual" aria-hidden="true">
-        <div class="chat-bubble-wrap">
-          <div class="chat-bubble user">
-            <span class="audio-icon"></span>
-            <span>「抱っこしすぎて腰が痛い。でも運動する時間ないです…」(音声入力)</span>
-          </div>
-          <div class="chat-bubble ai">
-            <span>🌸 ゆいどころAI：<br>〇〇さん, お疲れ様です！今日のカルテの骨盤の傾きからすると、立ち上がる時に少しだけ足の裏全体を意識するだけで、腰の負担が軽くなりますよ。深呼吸を1回だけしてみてくださいね。</span>
-          </div>
-          <div class="chat-bubble otonote">
-            <span>週に1回お届け ➔ 「あなた専用・思考癖レポート」<br>声で吐き出したモヤモヤから、心の余白と変化を分析してお届けします。</span>
-          </div>
-        </div>
-      </div>
-      <div class="otonote-txt">
-        <p class="catch">「次の予約日まで, どう過ごせばいい？」<br>その不安を, ゼロにします。</p>
-        <p>サロンでの変化を日常に落とし込むために、LINEを使った専用伴走システムを導入しています。「抱っこの姿勢、これで合ってる？」「今日ちょっと腰が重い。。」そんなときはいつでもLINEへ。</p>
-        <p>さらに、心に溜まったモヤモヤを声（ボイスメッセージ）で吐き出せる**「Oto-Note（オトノート）」**機能も。吹き込まれた音声から、あなたの「思考の癖」を客観的なレポートとしてお届け。体だけでなく、心の余白まで一緒に育てていきます。</p>
+<!-- 変化を数字で見る -->
+<section class="sec">
+  <div class="wrap">
+    <span class="eyebrow">変化を数字で見る</span>
+    <h2>始める前と、進んだあと。<br><span class="mark">同じものさし</span>で比べます。</h2>
+    <svg class="squiggle" viewBox="0 0 104 11"><path d="M2 7c8-7 16 7 24 0s16 7 24 0 16 7 24 0 16 7 24 0"/></svg>
+    <p class="lead" style="margin-top:14px;">「なんとなく良くなった気がする」で終わらせません。体験カウンセリングの日に測って、その後もおなじやり方で測ります。ものさしは2つ。</p>
+
+    <div class="layer">
+      <span class="no">ものさし ①</span>
+      <h3>あなたの目標に、点数をつける</h3>
+      <p>「いま、どれくらいできていますか」「それに、どれくらい満足していますか」。<br>決めた目標ごとに、0〜10で一緒に点数化します。国際的に使われている方法（COPM）にならったやり方です。<br>点数をつけるのは私ではなく、<b>あなた自身</b>です。</p>
+      <p class="ex">例：「抱っこしても腰が痛くならない」→ できている度 3／満足度 2。この数字が3ヶ月でどう動いたかを見ます。</p>
+    </div>
+
+    <div class="layer">
+      <span class="no">ものさし ②</span>
+      <h3>体のほうも、1〜2つだけ測る</h3>
+      <p>お悩みに合わせて、体のチェックを1〜2個だけ選びます。たくさん測っても続かないので、あなたに関係のあるものに絞ります。あわせて、ここ1週間の疲労感を0〜10で記録します。</p>
+      <div class="m3">
+        <div><b>骨盤まわり</b><span>ぐらつかずに<br>支えられるか</span></div>
+        <div><b>お腹の締まり</b><span>おへその上の<br>指の入る幅</span></div>
+        <div><b>疲労感</b><span>ここ1週間を<br>0〜10で</span></div>
       </div>
     </div>
+
+    <p style="margin-top:18px;font-size:16px;">そのうえで、<b>施術したその日の変化</b>は、前屈やあぐらで実際に動いて体で確かめてもらいます。数字と、ご自分の感覚と、両方で。</p>
+    <p style="margin-top:12px;font-size:13.5px;color:var(--ink-soft);">数字が動かない月もあります。そのときも、そのままお伝えします。良く見せるための測り方はしません。</p>
   </div>
 </section>
 
-<!-- 05 3ヶ月後の変化 -->
-<section>
-  <div class="inner">
-    <div class="sec-label"><span class="num">05</span><span class="txt">3ヶ月後のあなた</span></div>
-    <h2>ゴールは, <span class="pk">「自分で自分を整えられる私」</span>。</h2>
-    <div class="changes-box">
-      <p>サロンに通い続けていただくことが目的ではありません。3ヶ月後には、自分の体の声がわかるようになり、何か不調があっても「あ、自分でこうやって緩めれば大丈夫だな」と自信を持って育児を楽しめる状態を目指します。</p>
-      <div class="changes-grid">
-        <div class="change-col c1">
-          <h3>目に見える「体感・数値」の変化</h3>
-          <ul>
-            <li>前屈・あぐら・姿勢のゆがみが目に見えて改善する</li>
-            <li>「進捗見える化キット」により、体の変化が数字で納得できる</li>
-            <li>授乳や抱っこのときの「正しい重心」が体感として身につく</li>
-          </ul>
-        </div>
-        <div class="change-col c2">
-          <h3>暮らしの中で感じる「余白」の変化</h3>
-          <ul>
-            <li>寝かしつけや立ち上がるときの「よいしょ」が驚くほど軽くなる</li>
-            <li>「自分を労る時間」を肯定できるようになり、イライラがふっと減る</li>
-            <li>3ヶ月間の変化をまとめた「アルバム」が、私のがんばった宝物になる</li>
-          </ul>
-        </div>
-      </div>
+<!-- 【準備中・非表示】受けた方の実例。実在のお客様の前後の数字とご本人の言葉が揃い、
+     掲載のご承諾をいただけたら、この注釈を外して◯を実データに差し替える。作例・仮の声は載せない。
+<section class="sec">
+  <div class="wrap">
+    <span class="eyebrow">受けた方の変化</span>
+    <h2>目標の点数は、<br>こんなふうに動きます。</h2>
+    <svg class="squiggle" viewBox="0 0 104 11"><path d="M2 7c8-7 16 7 24 0s16 7 24 0 16 7 24 0 16 7 24 0"/></svg>
+    <div class="layer">
+      <span class="no">実例 ①</span>
+      <h3>目標「◯◯◯◯◯◯」（◯◯代）</h3>
+      <p>できている度 ◯→◯／満足度 ◯→◯（3ヶ月）。体のチェックは◯◯が◯◯に。</p>
+      <p class="ex">「ご本人の言葉をここに（言い回しはそのまま）」</p>
     </div>
   </div>
 </section>
-
-<!-- 06 3ヶ月の流れ -->
-<section id="roadmap" class="bg-mint">
-  <div class="inner">
-    <div class="sec-label"><span class="num">06</span><span class="txt">3ヶ月のロードマップ</span></div>
-    <h2>あせらない。でも, <span class="mt">確実に戻していく</span>3ステップ。</h2>
-    <div class="roadmap-flow">
-      <div class="roadmap-step">
-        <span class="step-tag">1ヶ月目</span>
-        <h3>骨盤と呼吸を【緩めて整える】</h3>
-        <p>出産と育児でガチガチになった身体の緊張を解き、深く呼吸ができる土台を作ります。</p>
-        <ul>
-          <li>骨盤底筋群・腹直筋のチェック</li>
-          <li>深い呼吸のための胸郭リリース</li>
-          <li>インナーマッスルの認識ワーク</li>
-        </ul>
-      </div>
-      <div class="roadmap-step">
-        <span class="step-tag">2ヶ月目</span>
-        <h3>感覚と重心を【つなげて動かす】</h3>
-        <p>脳 of 空間認知と足裏の感覚を呼び起こし、日常でしなやかに動ける身体の軸を育みます。</p>
-        <ul>
-          <li>股関節の可動域アプローチ</li>
-          <li>感覚統合あそびエクササイズ</li>
-          <li>立ち方・だっこの重心指導</li>
-        </ul>
-      </div>
-      <div class="roadmap-step">
-        <span class="step-tag">3ヶ月目</span>
-        <h3>日常に【自分のものにする】</h3>
-        <p>施術や指導がなくても、自分の力でコンディションを維持できる「自走状態」を確立します。</p>
-        <ul>
-          <li>全体の統合バランス調整</li>
-          <li>お家セルフケアルーティンの確立</li>
-          <li>卒業計測と3ヶ月アルバム贈呈</li>
-        </ul>
-      </div>
+-->
+<!-- 3つの選び方 -->
+<section class="sec">
+  <div class="wrap">
+    <span class="eyebrow">料金とプラン</span>
+    <h2>入口はひとつ。<br>その先を、<span class="mark">2つ</span>ご用意しています。</h2>
+    <svg class="squiggle" viewBox="0 0 104 11"><path d="M2 7c8-7 16 7 24 0s16 7 24 0 16 7 24 0 16 7 24 0"/></svg>
+    <p class="lead" style="margin-top:14px;">どなたも、まず90分の体験カウンセリングから。そこで測った数字を見ながら、続けるかどうか、どちらのコースにするかを一緒に決めます。表示はすべて税込です。</p>
+    <div class="m3">
+      <div><b>入口</b><span>体験90分<br>8,500円</span></div>
+      <div><b>本命</b><span>3ヶ月伴走<br>月19,900円</span></div>
+      <div><b>本気</b><span>短期集中<br>月49,800円</span></div>
     </div>
-  </div>
-</section>
 
-<!-- 07 料金・オファー -->
-<section id="offer">
-  <div class="inner">
-    <div class="sec-label"><span class="num">07</span><span class="txt">プログラム内容と料金</span></div>
-    <h2>一生モノの「体の地図」を,<br>手に入れる3ヶ月。</h2>
-    <div class="offer-box">
-      <span class="offer-label">オーダーメイド伴走パッケージ</span>
-      <h3>産後ボディ＆マインド根本回復<br>3ヶ月伴走プログラム</h3>
-      <p class="offer-sub">施術・少人数クラス・24時間AI伴走がすべて含まれたフルパッケージ</p>
-      <p class="offer-price">19,900<small> 円 / 月（税込・3ヶ月契約）</small></p>
-      <p class="offer-price-detail">※総額：59,700円｜3回分割または一括支払いが選べます</p>
-      
-      <ul class="offer-list">
-        <li><b>個別マンツーマン施術 90分×6回</b>（月2回 / なつきによる感覚・筋膜ケア）</li>
-        <li><b>少人数エクササイズ 60分×12回</b>（週1回 / 感覚統合あそびクラス）</li>
-        <li><b>ゆいどころAI ✖ Oto-Note伴走</b>（24時間いつでもLINEで相談・音声感情整理）</li>
-        <li><b>あなた専用セルフケア動画提供</b>（カルテに基づきカスタマイズ）</li>
-        <li class="gift"><b>卒業ギフト「3ヶ月からだ変化アルバム」プレゼント</b></li>
+    <!-- 入口 -->
+    <div class="try">
+      <span class="pill enji">まずはここから</span>
+      <h3 style="margin-top:10px;">体験カウンセリング 90分</h3>
+      <p style="margin:0;font-size:16px;color:var(--ink-soft);">売り込む場ではありません。<b>あなたが納得して選ぶための材料を、90分で全部そろえる時間</b>です。この日にやることは4つ。</p>
+      <ol class="flow">
+        <li><b>目標をお聞きする</b>：暮らしのどの場面を変えたいか、あなたの目標を一緒に言葉にします</li>
+        <li><b>測る</b>：目標の点数と、体のチェックを1〜2個</li>
+        <li><b>道すじを決める</b>：3ヶ月の見取り図を描いて、その場でワークを1つやってみます</li>
+        <li><b>もう一度測る</b>：帰る前に測り直して、その日の変化を確かめます</li>
+      </ol>
+      <p class="amt">8,500円<small>（税込・計測つき）</small></p>
+      <p style="margin:0;font-size:13.5px;color:var(--ink-soft);">コースを始める場合は、この8,500円を<b>初月の料金に全額充当</b>します。体験だけで終わっても、決めた目標と測った記録はそのままお渡しします。</p>
+      <p style="margin:12px 0 0;font-size:13.5px;color:var(--ink-soft);">無料にはしていません。ご自分の体に時間とお金を使うと決めた方に、こちらも全力で向き合いたいからです。</p>
+    </div>
+
+    <!-- 本命 -->
+    <div class="money">
+      <div class="k">いちばん選ばれています ／ 3ヶ月伴走コース</div>
+      <div class="v">月 19,900円<small>（税込）× 3ヶ月　総額 59,700円</small></div>
+      <p class="note" style="margin:6px 0 2px;">同じ90分の施術を単発で受けると、月2回で21,000円です。このコースは月19,900円で、そこに動画とLINEの相談がつきます。</p>
+      <ul>
+        <li><b>個別施術 90分 × 月2回</b>（3ヶ月で6回）。毎回、決めた目標に向けて組み立てます</li>
+        <li><b>エクササイズ動画 見放題</b>。あなたの体に合わせて、必要なものをお渡しします</li>
+        <li><b>LINEでのセルフケア相談</b>。3ヶ月のあいだ、ずっと</li>
+      </ul>
+      <p class="note">バキバキとならすような施術はしません。動画も、きつい筋トレではありません。次の予約日までのあいだも、ひとりで抱えなくて大丈夫です。</p>
+    </div>
+
+    <!-- 本気 -->
+    <div class="pro">
+      <span class="pill enji">本気で変えたい方へ</span><span class="limit">定員2名</span>
+      <h3 style="margin-top:12px;">短期集中本気コース</h3>
+      <p style="margin:0;font-size:16px;color:var(--ink-soft);">3ヶ月伴走コースの上位です。回数と、こちらが確保する時間の量が変わります。</p>
+      <p class="amt">月 49,800円<small>（税込）× 3ヶ月</small></p>
+      <p style="margin:0 0 6px;font-size:13.5px;color:var(--ink-soft);">総額 149,400円</p>
+      <ul class="dots">
+        <li><b>週1回・60分の確約枠。</b>固定の曜日でお取りします（振替は同じ週の中で）</li>
+        <li><b>空きがあれば、週にもう1回。</b>前日〜当日のご連絡で大丈夫です。追加料金はありません（実質、最大で週2回）</li>
+        <li><b>エクササイズ動画 見放題</b>と<b>LINEでのセルフケア相談</b>も含みます</li>
+        <li>枠を確約するため、<b>定員2名</b>とさせていただいています</li>
       </ul>
     </div>
-    
-    <div class="limit-box">
-      <p>お一人おひとりのカルテと計測レポートをなつき自身がすべて責任を持って管理・作成するため、<br>
-      このプログラムの同時受講生は **最大10名まで**、新規のスタートは **月4名様まで** とさせていただいております。<br>
-      お席が埋まり次第、受付は次の月となりますことをご了承ください。</p>
+  </div>
+</section>
+
+<!-- 流れ -->
+<section class="sec cream">
+  <div class="wrap">
+    <span class="eyebrow">3ヶ月の流れ</span>
+    <h2>あせらず、順番に。</h2>
+    <svg class="squiggle" viewBox="0 0 104 11"><path d="M2 7c8-7 16 7 24 0s16 7 24 0 16 7 24 0 16 7 24 0"/></svg>
+    <p class="lead" style="margin-top:14px;">進む流れは、おひとりずつ違います。最初にお体を見ながら、あなたの流れを一緒に決めます。<br>毎月ふり返りをして、次の進め方を確かめながら——ときには変えながら——進んでいきます。<br>毎回の時間は、手でのケアに、必要に応じてやさしい運動を組み合わせます。</p>
+    <p style="margin-top:12px;font-size:13.5px;color:var(--ink-soft);">下の3つは、いちばん多い流れの一例です。</p>
+    <ul class="steps">
+      <li><img class="ph" src="images/pr_step1.jpg" alt="骨盤まわりへの施術"><div><h3>1ヶ月目 ／ 緩めて整える</h3><p>出産と育児で力が入りっぱなしになった体を、まず緩めます。深く呼吸ができる土台をつくるところから。</p></div></li>
+      <li><img class="ph" src="images/pr_step2.jpg" alt="姿勢と重心を見ているところ"><div><h3>2ヶ月目 ／ つなげて動かす</h3><p>足裏の感覚や視線の向きを手がかりに、体の使い方を整えます。立ち方や抱っこの重心も、ここで見直します。</p></div></li>
+      <li><img class="ph" src="images/pr_step3.jpg" alt="施術後にひと息ついているところ"><div><h3>3ヶ月目 ／ 自分のものにする</h3><p>おうちでのセルフケアを生活の中に置いていきます。目指すのは、通い続けることではなく、ご自分で整えられるようになること。</p></div></li>
+    </ul>
+    <p style="margin-top:18px;font-size:13.5px;color:var(--ink-soft);">節目ごとに、最初につけた点数と体のチェックを測り直します。3ヶ月後にどれだけ動いたかが、ご自分の目で分かります。</p>
+  </div>
+</section>
+
+<!-- 私のこと -->
+<section class="sec">
+  <div class="wrap center">
+    <img class="circle" src="images/yuidocoro_5.jpg" alt="比嘉 夏希">
+    <h2 style="margin-top:20px;">「治す人」ではなく、<br>隣を走る人でありたい。</h2>
+    <svg class="squiggle" viewBox="0 0 104 11"><path d="M2 7c8-7 16 7 24 0s16 7 24 0 16 7 24 0 16 7 24 0"/></svg>
+    <p class="lead" style="margin-top:16px;">比嘉 夏希（ひが なつき）<br>作業療法士（国家資格）・3児の母</p>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <p style="font-size:16px;">私自身、沖縄で3人の子どもを育てながら、自分のことを後回しにする毎日を過ごしてきました。<br>「自分に時間やお金を使っていいのかな」というためらいも、誰かに体を委ねてほっとする時間の尊さも、身をもって知っています。</p>
+    <p style="font-size:16px;">作業療法士として大事にしてきたのは、その人らしく、やりたいことができる体へサポートすることです。<br>ゆいどころが目指すのは、通い続けていただくことではなく、笑顔で卒業していただくことです。</p>
+    <div class="card" style="margin-top:18px;">
+      <h3>お約束が3つあります</h3>
+      <ul class="dots" style="margin-top:10px;">
+        <li><b>無理な勧誘はしません。</b>体験だけでお帰りいただいて大丈夫です。</li>
+        <li><b>不安をあおる言葉を使いません。</b>「今やらないと」と急かすことはしません。</li>
+        <li><b>効果を大げさに言いません。</b>お伝えするのは、あなたがつけた点数と、測った記録だけです。</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- 08 プロフィール -->
-<section class="bg-cream">
-  <div class="inner">
-    <div class="sec-label"><span class="num">08</span><span class="txt">伴走する私のこと</span></div>
-    <h2>「治す先生」ではなく,<br>「隣を走る人」でありたい。</h2>
-    <div class="profile">
-      <div class="profile-photo">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="比嘉夏希。施術とカウンセリングで寄り添う姿">
-      </div>
-      <div class="profile-txt">
-        <p class="name">比嘉 夏希（ひが なつき）</p>
-        <p class="shikaku">作業療法士（国家資格）｜女性の為の整体 ゆいどころ 代表（3児 of 母）</p>
-        <p>私自身、沖縄で3人の子どもを育てながら、自分のことを後回しにする毎日を過ごしてきました。「自分に時間やお金を使っていいのかな…」というためらいも、「誰かに体を委ねてほっとする時間の尊さ」も、身をもって知っています。</p>
-        <p>ゆいどころが目指すのは、通い続けてもらうことではなく、**笑顔で卒業してもらうこと**。3ヶ月後、あなたが自分の体の一番の理解者になり、自分で自分をケアできるようになるまで、心を込めて隣で伴走します。</p>
-        
-        <div class="yakusoku">
-          <h3>安心のための、なつきの3つの約束</h3>
-          <ul>
-            <li>**無理な勧誘・売り込みは一切しません**。体験だけでお帰りいただいて大歓迎です。</li>
-            <li>**不安をあおる言葉を使いません**。「今やらないと危険」などと脅すことはいたしません。</li>
-            <li>**効果を大げさに言いません**。計測の数字と写真による、事実の変化だけをお伝えします。</li>
-          </ul>
-        </div>
-      </div>
+<!-- FAQ -->
+<section class="sec cream">
+  <div class="wrap">
+    <span class="eyebrow">よくあるご質問</span>
+    <h2>気になることは、<br>何でも聞いてくださいね。</h2>
+    <svg class="squiggle" viewBox="0 0 104 11"><path d="M2 7c8-7 16 7 24 0s16 7 24 0 16 7 24 0 16 7 24 0"/></svg>
+    <div style="margin-top:16px;">
+      <details><summary>どちらのコースを選べばいいですか？</summary><p>体験カウンセリングで測った結果と、ご希望のペースを見てから一緒に決めましょう。<br>多くの方は3ヶ月伴走コース（月19,900円）です。<br>期限が決まっていて集中したい方に、短期集中本気コース（月49,800円・定員2名）をご案内しています。</p></details>
+      <details><summary>体験カウンセリングだけで終わってもいいですか？</summary><p>大丈夫です。決めた目標と測った記録はそのままお渡しします。おうちでできることもお伝えしますので、持ち帰って続けていただけます。</p></details>
+      <details><summary>体験の8,500円は、あとから戻ってくるのですか？</summary><p>コースを始める場合は、8,500円を初月の料金に全額充当します。たとえば3ヶ月伴走コースなら、初月のお支払いは19,900円から8,500円を引いた金額になります。</p></details>
+      <details><summary>体がかたくて、運動も苦手です</summary><p>大丈夫です。動かすにも、順番があります。寝転がったまま視線を動かしたり、足裏の感覚を確かめたりするところから始めて、少しずつ動ける体へサポートしていきます。</p></details>
+      <details><summary>尿もれのことも相談できますか？</summary><p>お話しいただいて大丈夫です。お腹まわりの使い方や呼吸を整えていくことで、変化を目指していきます。<br>お腹の締まり具合を測って、始める前と後を比べていきます。<br>気になる症状がある場合は、産婦人科での受診とあわせてお考えください。</p></details>
+      <details><summary>産後、何年経っていても受けられますか？</summary><p>受けられます。産後1ヶ月健診を終えられた頃の方から、お子さんが小学生の方まで来られています。体は何年経ってからでも育て直せます。</p></details>
+      <details><summary>小さな子どもを連れて行っても大丈夫？</summary><p>完全予約制のプライベートサロンですので、他のお客様を気にする必要はありません。<br>託児は別途となりますが、ご利用いただけます。お日にちの調整が必要ですので、ご予約のときにお知らせください。</p></details>
+      <details><summary>お支払いの方法は？</summary><p>3ヶ月伴走コースは月々19,900円×3回、短期集中本気コースは月々49,800円×3回です。<br>まとめて一括でお支払いいただくこともできます（総額は変わりません）。体験カウンセリングのあとにご案内します。</p></details>
+      <details><summary>急な予定変更やキャンセルは？</summary><p>お子さんの急な発熱など、予定どおりにいかないことがありますよね。前日までにご連絡いただければ、振替でご案内できます。短期集中本気コースの確約枠は、同じ週の中での振替となります。</p></details>
+      <details><summary>3ヶ月が終わったら、どうなりますか？</summary><p>ご自分で整えられる状態を目指してお手伝いします。続けることを前提にはしていません。3ヶ月後に測り直した数字を見ながら、そのときに考えましょう。</p></details>
     </div>
   </div>
 </section>
 
-<!-- 09 推薦・実績 -->
-<section class="social-proof">
-  <div class="inner">
-    <div class="sec-label"><span class="num">09</span><span class="txt">実績と信頼</span></div>
-    <h2>地域医療や子育て支援の現場で,<br>専門性が評価されています。</h2>
-    <div class="proofs">
-      <div class="proof-card">
-        <h4>提携医療機関・助産院からの推薦</h4>
-        <p class="proof-sub">助産院「海の音」様 ／ クリニック「かみや母と子クリニック」様</p>
-        <p>「産前産後の女性の体は、ホルモンバランスや骨盤の変化で非常にデリケートです。比嘉さんは作業療法士としての医学的根拠をベースにしながら、ママの心にそっと寄り添う数少ない専門家です。心から推薦いたします。」</p>
-      </div>
-      <div class="proof-card">
-        <h4>地域・行政での活動実績</h4>
-        <p class="proof-sub">沖縄市子育て支援センター 親子エクササイズ定期講師</p>
-        <p>「子育て支援センターで開催した『親子エクササイズ』では、参加された多くのママから『体が軽くなった』『久しぶりに自分の体に集中できた』と大好評をいただきました。専門家向けセミナー（2026.5 産後のボディーマップと空間認知）も主催・登壇しています。」</p>
-      </div>
+<section class="sec">
+  <div class="wrap center">
+    <div class="dot-row"><i></i><i></i><i></i></div>
+    <h2>まずは90分、<br>いまの体を測ってみませんか。</h2>
+    <p class="lead" style="margin-top:12px;">公式LINEに「目標を決めたい」とひと言ください。日にちの候補をお送りします。</p>
+    <p style="margin-top:22px;"><a class="btn-line" href="https://lin.ee/yCRg3GX" target="_blank" rel="noopener">公式LINEで相談する</a></p>
+    <p style="margin-top:10px;font-size:13.5px;color:var(--ink-soft);">体験カウンセリング8,500円は、コースを始めると初月の料金に全額充当します。</p>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <p class="nm">女性の為の整体 ゆいどころ</p>
+    <p>沖縄・北中城村の女性専用・完全予約制のお家サロン。<br>産前産後の回復に、作業療法士が伴走します。</p>
+    <dl>
+      <dt>営業</dt><dd>9:30〜17:30</dd>
+      <dt>定休</dt><dd>土日祝</dd>
+      <dt>場所</dt><dd>北中城村安谷屋（詳細は予約時）</dd>
+      <dt>駐車</dt><dd>2台</dd>
+      <dt>電話</dt><dd><a href="tel:080-6484-5121">080-6484-5121</a></dd>
+    </dl>
+    <div class="nav">
+      <a href="3month-lp.html">3ヶ月コース</a>
+      <a href="https://www.yuidocoro.com/">公式サイト</a>
     </div>
+    <p class="cp">© 女性の為の整体 ゆいどころ</p>
   </div>
-</section>
-
-<!-- 10 体験カウンセリング -->
-<section id="taiken" class="bg-lav">
-  <div class="inner">
-    <div class="sec-label"><span class="num">10</span><span class="txt">まずはここから</span></div>
-    <h2>計測つき体験カウンセリング<br><span class="pk">90分で、今日の変化をその場で</span>。</h2>
-    <div class="taiken-box">
-      <p>「本当に私の体が変わるのかな…？」まずはそれをあなた自身で確かめてみてください。1対1でじっくりお話を伺い、施術の前後に写真と数値による計測を行います。</p>
-      <div class="taiken-flow">
-        <div class="tf"><div class="tf-num">1</div><p>LINEでご希望日を送信（24時間受付）</p></div>
-        <div class="tf"><div class="tf-num">2</div><p>じっくり丁寧なカウンセリング</p></div>
-        <div class="tf"><div class="tf-num">3</div><p>感覚を呼び覚ます体験施術</p></div>
-        <div class="tf"><div class="tf-num">4</div><p>施術前後の写真と数値で変化を確認</p></div>
-      </div>
-      
-      <div class="taiken-price">
-        <p class="tp">8,000円<small>（税込・90分・おみやげに当日の計測データ付き）</small></p>
-        <small>※本プログラムをスタートされる場合は、初月のお支払いにそのまま充当（実質無料）します。</small>
-      </div>
-      <p class="taiken-note">体験だけで「自分の体の現在地」がちゃんとわかるレポートを持ち帰っていただけます。<br>コースを始めるかどうかは、ご帰宅後におうちでゆっくり決めてくださいね。</p>
-      
-      <div style="text-align:center;">
-        <a class="cta-btn" href="https://lin.ee/yCRg3GX">LINEで体験カウンセリングを予約</a>
-        <p class="cta-under">24時間受付｜返信は営業時間内にお送りします</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 11 FAQ -->
-<section id="faq">
-  <div class="inner">
-    <div class="sec-label"><span class="num">11</span><span class="txt">よくあるご質問</span></div>
-    <h2>気になることは、<span class="pk">何でも聞いてくださいね</span>。</h2>
-    <details>
-      <summary>体がとてもかたくて、運動も苦手です。ついていけますか？</summary>
-      <p>もちろんです。ゆいどころのエクササイズは「がんばる筋トレ」ではありません。寝転がったまま視線を動かしたり、足裏の感覚を感じたりする優しい「あそび」です。運動経験がない方や、体がかたい方ほど、最初の変化に驚かれますよ。</p>
-    </details>
-    <details>
-      <summary>産後何年経っていても受けられますか？</summary>
-      <p>受けられます。産後1ヶ月検診を無事に終えられた頃から、お子さんが幼稚園、小学校に通われている方まで幅広くお越しいただいています。体は何歳からでも、何年経ってからでも育て直すことができます。</p>
-    </details>
-    <details>
-      <summary>小さな子どもを連れて行っても大丈夫ですか？</summary>
-      <p>完全予約制のプライベートサロンですので、他のお客様を気にする必要はございません。お子さんの月齢やご様子に合わせて快適に過ごせるよう調整いたしますので、ご予約時にLINEでお気軽にご相談くださいね。</p>
-    </details>
-    <details>
-      <summary>お支払いはどのような方法がありますか？</summary>
-      <p>3ヶ月コースの月謝払い（19,900円×3回）と、一括でのお支払いがお選びいただけます。体験カウンセリング後のご案内になりますので、まずは体験の時にお気軽にご相談ください。</p>
-    </details>
-    <details>
-      <summary>急な予定変更やキャンセルはできますか？</summary>
-      <p>子育て中は、お子さんの急な発熱など予期せぬトラブルがつきものですよね。前日までにご連絡いただければ、振替でのご案内が可能ですのでご安心くださいね。</p>
-    </details>
-  </div>
-</section>
-
-<!-- 最終CTA -->
-<section class="final">
-  <div class="inner">
-    <h2>自分を後回しにしない3ヶ月を、<br>いっしょに始めてみませんか。</h2>
-    <p>あなたの体が、どう変化したがっているか。まずは90分、その声を聞きに来てください。</p>
-    <a class="cta-btn" href="https://lin.ee/yCRg3GX">LINEで体験カウンセリングを予約</a>
-    <p class="cta-under">計測つき体験 90分 8,000円（税込）｜押し売りは一切ありません</p>
-  </div>
-</section>
-
-<!-- フッター -->
-<footer>
-  <p class="f-logo">女性の為の整体 ゆいどころ</p>
-  <p>沖縄県北中城村安谷屋（北中城ICより車で約4分）｜駐車場2台完備<br>
-  完全予約制・女性専用｜TEL 080-6484-5121<br>
-  <a href="https://www.yuidocoro.com/" target="_blank">公式サイトはこちら</a> ｜ Instagram @yuidocoro_2021</p>
-  <p style="margin-top: 20px; font-size: .8rem; opacity: .7;">© 女性の為の整体 ゆいどころ All Rights Reserved.</p>
 </footer>
 
+<div class="cta-fix">
+  <a class="btn-line" href="https://lin.ee/yCRg3GX" target="_blank" rel="noopener">LINEで予約・相談する</a>
+</div>
+
 <script>
-// ハンバーガーメニューの挙動
-const burger = document.getElementById('navBurger');
-const links = document.getElementById('navLinks');
+(function(){
+  var el = document.getElementById('goalSlider');
+  if(!el) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-burger.addEventListener('click', function() {
-  const open = links.classList.toggle('open');
-  burger.classList.toggle('open', open);
-  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-});
+  // 途切れなく流すために、中身をもう一組ふやす
+  var items = Array.prototype.slice.call(el.children);
+  items.forEach(function(n){ el.appendChild(n.cloneNode(true)); });
+  el.style.scrollSnapType = 'none';   // 自動で流すあいだはスナップを切る
 
-links.querySelectorAll('a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    links.classList.remove('open');
-    burger.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
+  var speed = 0.35;      // 1フレームあたりの進み具合（ゆっくり）
+  var paused = false, resumeTimer = null;
+
+  function half(){ return el.scrollWidth / 2; }
+
+  function pause(){
+    paused = true;
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function(){ paused = false; }, 2500); // 指を離して2.5秒で再開
+  }
+  ['pointerdown','touchstart','wheel','mouseenter'].forEach(function(ev){
+    el.addEventListener(ev, pause, {passive:true});
   });
-});
+  el.addEventListener('mouseleave', function(){ paused = false; });
+
+  function tick(){
+    if(!paused){
+      el.scrollLeft += speed;
+      if(el.scrollLeft >= half()) el.scrollLeft -= half();  // 折り返し（見た目は途切れない）
+    } else if(el.scrollLeft >= half()){
+      el.scrollLeft -= half();
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
 </script>
 </body>
 </html>
