@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>買ってよかったAI教材の本棚｜比嘉なつき</title>
+  <meta name="description" content="沖縄の整体サロン「ゆいどころ」を一人で回しながらWeb制作をしている比嘉なつきが、実際に買って、いまも仕事で使っているAI教材を7点ならべた本棚ページです。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome / Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* 配色はブランド基準（ゆいどころ）に準拠
+       えんじ #933E44 ／ 生成り #F9E8CE ／ セージ #99A084
+       やさしい桃 #EAAC97 ／ 墨色 #37322D ／ 台紙 #FDFAF4 */
+    :root {
+      --paper: #F9E8CE;
+      --card: #FDFAF4;
+      --ink: #37322D;
+      --ink-sub: rgba(55, 50, 45, 0.72);
+      --ink-muted: rgba(55, 50, 45, 0.55);
+
+      --enji: #933E44;
+      --enji-deep: #7C3238;
+      --sage: #99A084;
+      --momo: #EAAC97;
+
+      --line: rgba(55, 50, 45, 0.12);
+      --line-enji: rgba(147, 62, 68, 0.28);
+
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 8px;
+      --shadow-soft: 0 12px 30px -20px rgba(55, 50, 45, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.9;
+      letter-spacing: 0.04em;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(249, 232, 206, 0.92);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand-logo {
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+
+    .brand-logo i {
+      color: var(--enji);
+      font-size: 0.95rem;
+    }
+
+    .nav-back {
+      color: var(--ink-sub);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: color 0.3s;
+    }
+
+    .nav-back:hover {
+      color: var(--enji);
+    }
+
+    /* Hero */
+    .page-hero {
+      padding: 74px 0 44px;
+      text-align: center;
+    }
+
+    .page-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(147, 62, 68, 0.07);
+      border: 1px solid var(--line-enji);
+      border-radius: 30px;
+      color: var(--enji);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .page-title {
+      font-size: 2.3rem;
+      font-weight: 900;
+      line-height: 1.6;
+      color: var(--ink);
+      margin-bottom: 22px;
+      letter-spacing: 0.02em;
+    }
+
+    .page-title span {
+      color: var(--enji);
+    }
+
+    .page-lead {
+      color: var(--ink-sub);
+      font-size: 1.02rem;
+      line-height: 2;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .page-lead strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    /* 紹介リンクの開示（ページ上部・目立つ位置） */
+    .disclosure {
+      background: var(--card);
+      border: 1px solid var(--line-enji);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      max-width: 760px;
+      margin: 32px auto 0;
+      text-align: left;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .disclosure-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--enji);
+      font-weight: 800;
+      font-size: 0.98rem;
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .disclosure-head i {
+      font-size: 1rem;
+    }
+
+    .disclosure p {
+      color: var(--ink-sub);
+      font-size: 0.92rem;
+      line-height: 1.95;
+    }
+
+    .disclosure p + p {
+      margin-top: 10px;
+    }
+
+    .disclosure strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    /* Section common */
+    .section {
+      padding: 0 0 70px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--ink);
+      position: relative;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    /* えんじの短い横線（ブランドの決まり物） */
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 2px;
+      background: var(--enji);
+    }
+
+    .section-desc {
+      color: var(--ink-sub);
+      font-size: 0.96rem;
+      line-height: 1.95;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* 本棚のカード */
+    .shelf-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .book-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s, box-shadow 0.4s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--line-enji);
+      box-shadow: 0 20px 40px -26px rgba(55, 50, 45, 0.6);
+    }
+
+    .book-cat {
+      align-self: flex-start;
+      background: rgba(153, 160, 132, 0.18);
+      color: var(--ink-sub);
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .book-cat i {
+      color: var(--enji);
+      font-size: 0.74rem;
+    }
+
+    .book-title {
+      font-size: 1.06rem;
+      font-weight: 800;
+      line-height: 1.7;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .book-author {
+      color: var(--ink-muted);
+      font-size: 0.84rem;
+      font-weight: 500;
+      margin-bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .book-author i {
+      color: var(--sage);
+      font-size: 0.8rem;
+    }
+
+    /* なつきの使いどころ（本人の言葉） */
+    .book-note {
+      background: rgba(234, 172, 151, 0.16);
+      border-left: 3px solid var(--momo);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 16px 18px;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .book-note-label {
+      display: block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--enji);
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .book-note p {
+      color: var(--ink-sub);
+      font-size: 0.92rem;
+      line-height: 1.95;
+    }
+
+    .book-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--enji);
+      border: 1px solid var(--line-enji);
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .book-link:hover {
+      background: var(--enji);
+      color: var(--card);
+      border-color: var(--enji);
+    }
+
+    .shelf-footnote {
+      color: var(--ink-muted);
+      font-size: 0.85rem;
+      line-height: 2;
+      max-width: 800px;
+      margin: 34px auto 0;
+      text-align: center;
+    }
+
+    /* CTA */
+    .contact-cta {
+      background: var(--card);
+      border: 1px solid var(--line-enji);
+      border-radius: 26px;
+      padding: 52px 36px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-cta h2 {
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--ink);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .contact-cta p {
+      color: var(--ink-sub);
+      max-width: 640px;
+      margin: 0 auto 28px;
+      font-size: 0.98rem;
+      line-height: 2;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-primary {
+      background: var(--enji);
+      color: var(--card);
+      padding: 16px 36px;
+      border-radius: 35px;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: var(--shadow-soft);
+      transition: background 0.3s, transform 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .btn-cta-primary:hover {
+      background: var(--enji-deep);
+      transform: translateY(-2px);
+    }
+
+    .contact-cta .cta-note {
+      color: var(--ink-muted);
+      font-size: 0.84rem;
+      line-height: 1.9;
+      max-width: 620px;
+      margin: 18px auto 0;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 34px 0 40px;
+      text-align: center;
+      color: var(--ink-muted);
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+
+    .footer-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--enji);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.92rem;
+      border-bottom: 1px solid var(--line-enji);
+      padding-bottom: 2px;
+      margin-bottom: 20px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .footer-back:hover {
+      color: var(--enji-deep);
+      border-color: var(--enji);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .shelf-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 10px 0;
+      }
+      .nav-wrapper {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .brand-logo {
+        font-size: 1.02rem;
+      }
+      .page-hero {
+        padding: 40px 0 32px;
+      }
+      .page-eyebrow {
+        font-size: 0.78rem;
+        padding: 7px 15px;
+        margin-bottom: 18px;
+      }
+      .page-title {
+        font-size: 1.52rem;
+        margin-bottom: 18px;
+      }
+      .page-lead {
+        font-size: 0.94rem;
+      }
+      .disclosure {
+        padding: 22px 18px;
+        margin-top: 26px;
+      }
+      .disclosure-head {
+        font-size: 0.92rem;
+        align-items: flex-start;
+      }
+      .disclosure-head i {
+        margin-top: 5px;
+      }
+      .disclosure p {
+        font-size: 0.88rem;
+      }
+      .section-title {
+        font-size: 1.42rem;
+      }
+      .section-desc {
+        font-size: 0.9rem;
+      }
+      .book-card {
+        padding: 24px 18px;
+      }
+      .book-title {
+        font-size: 1rem;
+      }
+      .book-link {
+        width: 100%;
+      }
+      .contact-cta {
+        padding: 36px 20px;
+        border-radius: 22px;
+      }
+      .contact-cta h2 {
+        font-size: 1.34rem;
+      }
+      .btn-cta-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 20px;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .page-title {
+        font-size: 1.36rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="./index.html" class="brand-logo">
+        <i class="fa-solid fa-pen-ruler"></i> 比嘉なつき
+      </a>
+      <a href="./index.html" class="nav-back">
+        <i class="fa-solid fa-arrow-left-long"></i> 制作実績のページへ
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-eyebrow">
+        <i class="fa-solid fa-book-open"></i> 買ってよかったAI教材
+      </div>
+      <h1 class="page-title">
+        私がいま、<br>
+        <span>実際に使っている本棚。</span>
+      </h1>
+      <p class="page-lead">
+        サロンを一人で回しながら、LPやWebアプリを作っています。その手元にある教材のうち、
+        <strong>いまも仕事で開いているものだけ</strong>を7つ並べました。
+      </p>
+
+      <!-- 紹介リンクの開示（ステマ規制対応・ファーストビュー内） -->
+      <div class="disclosure">
+        <div class="disclosure-head">
+          <i class="fa-solid fa-circle-info"></i>
+          はじめに：このページのリンクについて
+        </div>
+        <p>
+          このページのリンクは<strong>紹介リンク（アフィリエイト）</strong>です。
+          ここからご購入があると、私に紹介料が入ります。
+        </p>
+        <p>
+          そのぶん、<strong>自分で買って、実際に使っているものだけ</strong>を載せています。
+          使っていないものは、どれだけ評判がよくても、ここには置きません。
+          それぞれ「何に使っているか」を、私の言葉で添えました。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 本棚 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">7つの教材と、私の使いどころ</h2>
+        <p class="section-desc">
+          動画づくり、AIを使う土台、マーケティングの考え方、画像や漫画。<br>
+          日々の仕事のどこで開いているかを、そのまま書いています。
+        </p>
+      </div>
+
+      <div class="shelf-grid">
+
+        <!-- 1 -->
+        <article class="book-card">
+          <span class="book-cat"><i class="fa-solid fa-film"></i> 動画編集</span>
+          <h3 class="book-title">AIにショート動画作成を丸投げできるスキル【編集ソフト不要・ClaudeとCodex対応】</h3>
+          <p class="book-author"><i class="fa-solid fa-pen-nib"></i> しゅうへい</p>
+          <div class="book-note">
+            <span class="book-note-label">なつきの使いどころ</span>
+            <p>インスタリールや動画の部屋の動画編集はこちらでやってます。最高に時短になるしクオリティーも良いです</p>
+          </div>
+          <a href="https://brmk.io/DtYW99" target="_blank" rel="noopener" class="book-link">
+            <i class="fa-solid fa-up-right-from-square"></i> Brainで見る
+          </a>
+        </article>
+
+        <!-- 2 -->
+        <article class="book-card">
+          <span class="book-cat"><i class="fa-solid fa-chalkboard-user"></i> 講義動画</span>
+          <h3 class="book-title">【2000部突破】AIで動画講義を作る方法〜撮影ゼロ・音声代は1本約20円・自分の声のクローンで</h3>
+          <p class="book-author"><i class="fa-solid fa-pen-nib"></i> イケハヤ</p>
+          <div class="book-note">
+            <span class="book-note-label">なつきの使いどころ</span>
+            <p>動画の部屋の講義動画に使ってます。撮影なしで作れます</p>
+          </div>
+          <a href="https://brmk.io/uw8B9L" target="_blank" rel="noopener" class="book-link">
+            <i class="fa-solid fa-up-right-from-square"></i> Brainで見る
+          </a>
+        </article>
+
+        <!-- 3 -->
+        <article class="book-card">
+          <span class="book-cat"><i class="fa-solid fa-chalkboard-user"></i> 講義動画</span>
+          <h3 class="book-title">【105部突破】AIで動画に"動き（モーション）"を足す方法｜20パターンのモーション詰め合わせスキル</h3>
+          <p class="book-author"><i class="fa-solid fa-pen-nib"></i> ウミノ</p>
+          <div class="book-note">
+            <span class="book-note-label">なつきの使いどころ</span>
+            <p>こちらも講義動画づくりに。動きが足せると仕上がりが一段変わります</p>
+          </div>
+          <a href="https://brmk.io/bx4V9a" target="_blank" rel="noopener" class="book-link">
+            <i class="fa-solid fa-up-right-from-square"></i> Brainで見る
+          </a>
+        </article>
+
+        <!-- 4 -->
+        <article class="book-card">
+          <span class="book-cat"><i class="fa-solid fa-brain"></i> AI活用の土台</span>
+          <h3 class="book-title">メモが資産になる！Antigravity × Obsidian で第2の脳を構築する完全ロードマップ</h3>
+          <p class="book-author"><i class="fa-solid fa-pen-nib"></i> リツト</p>
+          <div class="book-note">
+            <span class="book-note-label">なつきの使いどころ</span>
+            <p>私がAIでLPやアプリを作るきっかけをくれた教材。今でもこちらのおかげで色々なものを作ったり、事業の分析をしています</p>
+          </div>
+          <a href="https://brmk.io/5nQ0U4" target="_blank" rel="noopener" class="book-link">
+            <i class="fa-solid fa-up-right-from-square"></i> Brainで見る
+          </a>
+        </article>
+
+        <!-- 5 -->
+        <article class="book-card">
+          <span class="book-cat"><i class="fa-solid fa-bullseye"></i> マーケティング</span>
+          <h3 class="book-title">【3000部突破】『明鏡』</h3>
+          <p class="book-author"><i class="fa-solid fa-pen-nib"></i> イケハヤ</p>
+          <div class="book-note">
+            <span class="book-note-label">なつきの使いどころ</span>
+            <p>マーケティングを全然わからない私にとってのバイブル本。この本のお陰で少しずつAIを使いながらサロン運営をマーケティング思考で動けるようになってきています</p>
+          </div>
+          <a href="https://brmk.io/FLXWTx" target="_blank" rel="noopener" class="book-link">
+            <i class="fa-solid fa-up-right-from-square"></i> Brainで見る
+          </a>
+        </article>
+
+        <!-- 6 -->
+        <article class="book-card">
+          <span class="book-cat"><i class="fa-solid fa-bullseye"></i> マーケティング</span>
+          <h3 class="book-title">【3000部突破】AIを『マーケティング参謀』にするスキル『軍配』</h3>
+          <p class="book-author"><i class="fa-solid fa-pen-nib"></i> イケハヤ</p>
+          <div class="book-note">
+            <span class="book-note-label">なつきの使いどころ</span>
+            <p>事業について毎回悩みがある時はこちらの軍配に助けられてます</p>
+          </div>
+          <a href="https://brmk.io/xJiGrN" target="_blank" rel="noopener" class="book-link">
+            <i class="fa-solid fa-up-right-from-square"></i> Brainで見る
+          </a>
+        </article>
+
+        <!-- 7 -->
+        <article class="book-card">
+          <span class="book-cat"><i class="fa-solid fa-wand-magic-sparkles"></i> 画像・漫画</span>
+          <h3 class="book-title">WEBマーケ特化ツール【AI漫画クリエイター】30秒で、スマホ一つで、外注ゼロで。</h3>
+          <p class="book-author"><i class="fa-solid fa-pen-nib"></i> 豊田将大</p>
+          <div class="book-note">
+            <span class="book-note-label">なつきの使いどころ</span>
+            <p>自分のキャラクターをこちらで作ったり、わかりやすい漫画として作ったりできてます</p>
+          </div>
+          <a href="https://brmk.io/iFeA0g" target="_blank" rel="noopener" class="book-link">
+            <i class="fa-solid fa-up-right-from-square"></i> Brainで見る
+          </a>
+        </article>
+
+      </div>
+
+      <p class="shelf-footnote">
+        合う・合わないは、いまのお仕事の中身によって変わります。<br>
+        「自分の場合はどれから？」と迷ったら、買う前にLINEで聞いてくださってかまいません。
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-cta">
+        <h2>「うちの場合は、どう使えますか？」もどうぞ</h2>
+        <p>
+          教材のことでも、Webや公式LINEのことでも。
+          まだ決まっていない段階のご相談で大丈夫です。
+        </p>
+        <div class="cta-buttons">
+          <a href="https://line.me/R/ti/p/@304uicme" target="_blank" rel="noopener" class="btn-cta-primary">
+            <i class="fa-regular fa-comment-dots"></i> LINEで相談する
+          </a>
+        </div>
+        <p class="cta-note">
+          友だち追加して、ひとことメッセージを送るだけでだいじょうぶです。売り込みのご連絡はいたしません。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="./index.html" class="footer-back">
+        <i class="fa-solid fa-arrow-left-long"></i> 制作実績のページへ戻る
+      </a>
+      <p>&copy; 2026 比嘉なつき</p>
+    </div>
+  </footer>
+
+</body>
+</html>
