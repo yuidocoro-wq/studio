@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9月空き状況カレンダー</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-serif: 'Noto Serif JP', serif;
+      --font-english: 'Cinzel', serif;
+      --color-text-main: #3a2e2b;
+      --color-saturday: #4a6b82;
+      --color-sunday-holiday: #b85a4b;
+      --color-border: #d2c8c3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f5efe6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: var(--font-serif);
+      color: var(--color-text-main);
+    }
+
+    /* 9:16のストーリーサイズを模したコンテナ */
+    .phone-container {
+      width: 450px;
+      height: 800px;
+      position: relative;
+      background-image: url('salon_calendar_bg.png');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 白いアーチ型のカード */
+    .calendar-card {
+      width: 395px;
+      height: 720px;
+      background-color: rgba(255, 255, 255, 0.94);
+      border-top-left-radius: 197px; /* 横幅の半分で完全なアーチにする */
+      border-top-right-radius: 197px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 40px 16px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(5px);
+    }
+
+    /* 月表示ヘッダー */
+    .header {
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    .month-number {
+      font-family: var(--font-english);
+      font-size: 4.5rem;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -2px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .month-english-wrap {
+      display: inline-block;
+      text-align: left;
+      vertical-align: bottom;
+      margin-bottom: 8px;
+    }
+
+    .year {
+      font-family: var(--font-english);
+      font-size: 1.05rem;
+      display: block;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .month-english {
+      font-family: var(--font-english);
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: block;
+      line-height: 1;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      margin-top: 3px;
+      color: #5a4b46;
+      border-bottom: 1px solid rgba(90, 75, 70, 0.15);
+      padding-bottom: 4px;
+      width: 190px;
+      text-align: center;
+    }
+
+    /* カレンダーテーブル */
+    .calendar-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .calendar-table th {
+      font-family: var(--font-english);
+      font-size: 0.72rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-bottom: 6px;
+      color: #7a6e6a;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .calendar-table th.sat {
+      color: var(--color-saturday);
+    }
+
+    .calendar-table th.sun {
+      color: var(--color-sunday-holiday);
+    }
+
+    .calendar-table td {
+      height: 78px;
+      border: 1px solid var(--color-border);
+      text-align: center;
+      vertical-align: top;
+      padding: 3px 1px;
+      position: relative;
+    }
+
+    /* 外枠のボーダーを消して内側のグリッド線のみにする */
+    .calendar-table tr td:first-child {
+      border-left: none;
+    }
+    .calendar-table tr td:last-child {
+      border-right: none;
+    }
+    .calendar-table tr th:first-child {
+      border-left: none;
+    }
+    .calendar-table tr th:last-child {
+      border-right: none;
+    }
+    .calendar-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .day-num {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .sat .day-num {
+      color: var(--color-saturday);
+    }
+
+    .sun .day-num, .holiday .day-num {
+      color: var(--color-sunday-holiday);
+    }
+
+    .empty-day {
+      background-color: transparent;
+      border: none;
+    }
+
+    /* 状態テキスト */
+    .status-text {
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-top: 12px;
+      display: block;
+      letter-spacing: 1px;
+    }
+
+    .status-holiday {
+      color: #9a8e8a;
+    }
+
+    .status-full {
+      color: var(--color-sunday-holiday);
+      font-weight: 700;
+    }
+
+    /* 時間枠 */
+    .slots-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+      margin-top: 1px;
+    }
+
+    .slot {
+      font-family: var(--font-serif);
+      font-size: 0.58rem;
+      color: #5e524f;
+      display: inline-block;
+      line-height: 1.15;
+    }
+
+    /* 予約済み（二重線で消す） */
+    .slot-closed {
+      position: relative;
+      color: #bfaea8;
+    }
+
+    .slot-closed::after {
+      content: "";
+      position: absolute;
+      left: -2px;
+      right: -2px;
+      top: 50%;
+      height: 2px;
+      border-top: 1px solid #7c6862;
+      border-bottom: 1px solid #7c6862;
+      transform: translateY(-50%);
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="phone-container">
+    <div class="calendar-card">
+      
+      <!-- ヘッダー -->
+      <div class="header">
+        <div style="display: flex; align-items: flex-end; justify-content: center;">
+          <span class="month-number">9</span>
+          <div class="month-english-wrap">
+            <span class="year">2026</span>
+            <span class="month-english">September</span>
+          </div>
+        </div>
+        <h1 class="title">9月空き状況</h1>
+      </div>
+
+      <!-- カレンダー -->
+      <table class="calendar-table">
+        <thead>
+          <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th class="sat">Sat</th>
+            <th class="sun">Sun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 1週目 (9/1〜9/6) -->
+          <tr>
+            <td class="empty-day" style="border-top: none;"></td>
+            <td>
+              <span class="day-num">1</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">2</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">3</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">4</span>
+              <div class="slots-container">
+                <span class="slot slot-closed">9:30</span>
+                <span class="slot slot-closed">11:30</span>
+                <span class="slot">14:00</span>
+              </div>
+            </td>
+            <td class="sat">
+              <span class="day-num">5</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+            <td class="sun">
+              <span class="day-num">6</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+          </tr>
+
+          <!-- 2週目 (9/7〜9/13) -->
+          <tr>
+            <td>
+              <span class="day-num">7</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">8</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">9</span>
+              <div class="slots-container">
+                <span class="slot">17:30</span>
+                <span class="slot">18:30</span>
+                <span class="slot">19:30</span>
+              </div>
+            </td>
+            <td>
+              <span class="day-num">10</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">11</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td class="sat">
+              <span class="day-num">12</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+            <td class="sun">
+              <span class="day-num">13</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+          </tr>
+
+          <!-- 3週目 (9/14〜9/20) -->
+          <tr>
+            <td>
+              <span class="day-num">14</span>
+              <div class="slots-container">
+                <span class="slot">9:30</span>
+                <span class="slot slot-closed">11:30</span>
+                <span class="slot slot-closed">13:30</span>
+              </div>
+            </td>
+            <td>
+              <span class="day-num">15</span>
+              <div class="slots-container">
+                <span class="slot slot-closed">9:30</span>
+                <span class="slot slot-closed">11:30</span>
+                <span class="slot">13:30</span>
+                <span class="slot">15:00</span>
+              </div>
+            </td>
+            <td>
+              <span class="day-num">16</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">17</span>
+              <div class="slots-container">
+                <span class="slot">9:30</span>
+                <span class="slot">11:30</span>
+                <span class="slot">13:30</span>
+              </div>
+            </td>
+            <td>
+              <span class="day-num">18</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td class="sat">
+              <span class="day-num">19</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+            <td class="sun">
+              <span class="day-num">20</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+          </tr>
+
+          <!-- 4週目 (9/21〜9/27) -->
+          <tr>
+            <td class="holiday">
+              <!-- 敬老の日 -->
+              <span class="day-num">21</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+            <td class="holiday">
+              <!-- 国民の休日 -->
+              <span class="day-num">22</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+            <td class="holiday">
+              <!-- 秋分の日 -->
+              <span class="day-num">23</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+            <td>
+              <span class="day-num">24</span>
+              <div class="slots-container">
+                <span class="slot">9:30</span>
+                <span class="slot">11:30</span>
+                <span class="slot">13:30</span>
+              </div>
+            </td>
+            <td>
+              <span class="day-num">25</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td class="sat">
+              <span class="day-num">26</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+            <td class="sun">
+              <span class="day-num">27</span>
+              <span class="status-text status-holiday">休</span>
+            </td>
+          </tr>
+
+          <!-- 5週目 (9/28〜9/30) -->
+          <tr>
+            <td>
+              <span class="day-num">28</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">29</span>
+              <span class="status-text status-full">満</span>
+            </td>
+            <td>
+              <span class="day-num">30</span>
+              <div class="slots-container">
+                <span class="slot">17:30</span>
+                <span class="slot">18:30</span>
+                <span class="slot">19:30</span>
+              </div>
+            </td>
+            <td class="empty-day"></td>
+            <td class="empty-day"></td>
+            <td class="empty-day"></td>
+            <td class="empty-day"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</body>
+</html>

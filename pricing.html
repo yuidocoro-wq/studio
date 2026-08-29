@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>制作料金のご案内｜会員紹介マップ・メンバー紹介チラシ｜比嘉なつき</title>
+  <meta name="description" content="団体・チームの会員紹介マップ（Webアプリ＋掲載フォーム＋更新の仕組み）と、メンバー紹介チラシ（A4・印刷用データつき）の内容と制作料金のご案内です。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome / Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* 配色はブランド基準（ゆいどころ）に準拠
+       えんじ #933E44 ／ 生成り #F9E8CE ／ セージ #99A084
+       やさしい桃 #EAAC97 ／ 墨色 #37322D ／ 台紙 #FDFAF4 */
+    :root {
+      --paper: #F9E8CE;
+      --card: #FDFAF4;
+      --ink: #37322D;
+      --ink-sub: rgba(55, 50, 45, 0.72);
+      --ink-muted: rgba(55, 50, 45, 0.55);
+
+      --enji: #933E44;
+      --enji-deep: #7C3238;
+      --sage: #99A084;
+      --momo: #EAAC97;
+
+      --line: rgba(55, 50, 45, 0.12);
+      --line-enji: rgba(147, 62, 68, 0.28);
+
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 8px;
+      --shadow-soft: 0 12px 30px -20px rgba(55, 50, 45, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.9;
+      letter-spacing: 0.04em;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(249, 232, 206, 0.92);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand-logo {
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+
+    .brand-logo i {
+      color: var(--enji);
+      font-size: 0.95rem;
+    }
+
+    .nav-back {
+      color: var(--ink-sub);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: color 0.3s;
+    }
+
+    .nav-back:hover {
+      color: var(--enji);
+    }
+
+    /* Hero */
+    .page-hero {
+      padding: 74px 0 52px;
+      text-align: center;
+    }
+
+    .page-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(147, 62, 68, 0.07);
+      border: 1px solid var(--line-enji);
+      border-radius: 30px;
+      color: var(--enji);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .page-title {
+      font-size: 2.3rem;
+      font-weight: 900;
+      line-height: 1.6;
+      color: var(--ink);
+      margin-bottom: 22px;
+      letter-spacing: 0.02em;
+    }
+
+    .page-title span {
+      color: var(--enji);
+    }
+
+    .page-lead {
+      color: var(--ink-sub);
+      font-size: 1.02rem;
+      line-height: 2;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .page-lead strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    /* Section common */
+    .section {
+      padding: 0 0 70px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--ink);
+      position: relative;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    /* えんじの短い横線（ブランドの決まり物） */
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 2px;
+      background: var(--enji);
+    }
+
+    .section-desc {
+      color: var(--ink-sub);
+      font-size: 0.96rem;
+      line-height: 1.95;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* 商品カード */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 32px 26px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--enji);
+      background: rgba(147, 62, 68, 0.07);
+      border: 1px solid var(--line-enji);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .product-card h3 {
+      font-size: 1.24rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .product-card > p {
+      font-size: 0.92rem;
+      color: var(--ink-sub);
+      line-height: 1.95;
+      margin-bottom: 18px;
+    }
+
+    .product-card > p strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .product-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .product-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.89rem;
+      color: var(--ink-sub);
+      line-height: 1.85;
+    }
+
+    .product-points i {
+      color: var(--enji);
+      margin-top: 7px;
+      flex-shrink: 0;
+      font-size: 0.76rem;
+    }
+
+    .product-demo-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--enji);
+      border: 1px solid var(--line-enji);
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.87rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .product-demo-link:hover {
+      background: var(--enji);
+      color: var(--card);
+      border-color: var(--enji);
+    }
+
+    /* 料金 3段 */
+    .price-scope {
+      text-align: center;
+      color: var(--ink-sub);
+      font-size: 0.94rem;
+      line-height: 2;
+      max-width: 780px;
+      margin: 0 auto 34px;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 26px;
+    }
+
+    .price-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-card.featured {
+      background: var(--card);
+      border: 2px solid var(--enji);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .price-tier-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 4px;
+      line-height: 1.65;
+    }
+
+    .price-card.featured .price-tier-name {
+      color: var(--enji);
+    }
+
+    .price-tier-sub {
+      font-size: 0.79rem;
+      color: var(--ink-muted);
+      margin-bottom: 20px;
+      line-height: 1.75;
+    }
+
+    .price-row {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .price-row:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .price-item-name {
+      display: block;
+      font-size: 0.79rem;
+      font-weight: 700;
+      color: var(--ink-muted);
+      margin-bottom: 4px;
+    }
+
+    .price-item-value {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.6;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    .price-card.featured .price-item-value {
+      color: var(--enji);
+    }
+
+    .price-item-value small {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink-sub);
+      margin-top: 4px;
+      line-height: 1.8;
+    }
+
+    .price-card-note {
+      font-size: 0.79rem;
+      color: var(--ink-muted);
+      line-height: 1.85;
+      margin-top: 16px;
+    }
+
+    .price-footnote {
+      text-align: center;
+      color: var(--ink-muted);
+      font-size: 0.85rem;
+      line-height: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* CTA */
+    .contact-cta {
+      background: var(--card);
+      border: 1px solid var(--line-enji);
+      border-radius: 26px;
+      padding: 52px 36px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-cta h2 {
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--ink);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .contact-cta p {
+      color: var(--ink-sub);
+      max-width: 640px;
+      margin: 0 auto 28px;
+      font-size: 0.98rem;
+      line-height: 2;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-primary {
+      background: var(--enji);
+      color: var(--card);
+      padding: 16px 36px;
+      border-radius: 35px;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: var(--shadow-soft);
+      transition: background 0.3s, transform 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .btn-cta-primary:hover {
+      background: var(--enji-deep);
+      transform: translateY(-2px);
+    }
+
+    .contact-cta .cta-note {
+      color: var(--ink-muted);
+      font-size: 0.84rem;
+      line-height: 1.9;
+      max-width: 620px;
+      margin: 18px auto 0;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 34px 0 40px;
+      text-align: center;
+      color: var(--ink-muted);
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+
+    .footer-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--enji);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.92rem;
+      border-bottom: 1px solid var(--line-enji);
+      padding-bottom: 2px;
+      margin-bottom: 20px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .footer-back:hover {
+      color: var(--enji-deep);
+      border-color: var(--enji);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 10px 0;
+      }
+      .nav-wrapper {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .brand-logo {
+        font-size: 1.02rem;
+      }
+      .page-hero {
+        padding: 40px 0 40px;
+      }
+      .page-eyebrow {
+        font-size: 0.78rem;
+        padding: 7px 15px;
+        margin-bottom: 18px;
+      }
+      .page-title {
+        font-size: 1.52rem;
+        margin-bottom: 18px;
+      }
+      .page-lead {
+        font-size: 0.94rem;
+      }
+      .section-title {
+        font-size: 1.42rem;
+      }
+      .section-desc {
+        font-size: 0.9rem;
+      }
+      .product-card,
+      .price-card {
+        padding: 24px 18px;
+      }
+      .price-item-value {
+        font-size: 1.14rem;
+      }
+      .contact-cta {
+        padding: 36px 20px;
+        border-radius: 22px;
+      }
+      .contact-cta h2 {
+        font-size: 1.34rem;
+      }
+      .btn-cta-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 20px;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .page-title {
+        font-size: 1.36rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="./index.html" class="brand-logo">
+        <i class="fa-solid fa-pen-ruler"></i> 比嘉なつき
+      </a>
+      <a href="./index.html" class="nav-back">
+        <i class="fa-solid fa-arrow-left-long"></i> 制作実績のページへ
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-eyebrow">
+        <i class="fa-solid fa-yen-sign"></i> 制作料金のご案内
+      </div>
+      <h1 class="page-title">
+        メンバー紹介を、<br>
+        <span>Webと紙の両方で。</span>
+      </h1>
+      <p class="page-lead">
+        団体やチームの「誰に何を相談できるのか」を、スマホで探せる<strong>マップ（Webアプリ）</strong>と、
+        会場で配れる<strong>A4のチラシ</strong>にします。<br>
+        内容と料金を、このページにまとめました。
+      </p>
+    </div>
+  </section>
+
+  <!-- 商品説明 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">お作りするもの</h2>
+        <p class="section-desc">
+          作り方をお教えするのではなく、私がまるごと作ってお渡しします。<br>
+          マップだけ、チラシだけ、どちらか一方でもお受けしています。
+        </p>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- 商品1: マップ -->
+        <div class="product-card">
+          <span class="product-label"><i class="fa-solid fa-map-location-dot"></i> その一・Webアプリ</span>
+          <h3>困った時マップ<br>（チームの会員紹介Webアプリ）</h3>
+          <p>
+            チームのメンバーを、「肩こり」「むくみ」「運動不足」といった<strong>お客さまの困りごとのほうから</strong>探せるWebページです。
+            スマホで開いて、その場でお相手に見せられます。紙の名簿と違って、メンバーが増えても差し替えるだけで済みます。
+          </p>
+          <ul class="product-points">
+            <li><i class="fa-solid fa-check"></i> 困りごと・カテゴリ・キーワードで絞り込める検索機能</li>
+            <li><i class="fa-solid fa-check"></i> メンバーごとの写真・得意分野・連絡先を1画面にまとめて表示</li>
+            <li><i class="fa-solid fa-check"></i> LINEで紹介するときの文章を、ワンタップでコピーできる機能</li>
+            <li><i class="fa-solid fa-check"></i> 掲載情報をGoogleフォームで集める仕組みつき（メンバーは入力するだけ）</li>
+            <li><i class="fa-solid fa-check"></i> QRコードにすれば、チラシ・名刺・スライドのどこからでも開けます</li>
+          </ul>
+          <a href="https://yuidocoro-wq.github.io/Wellness-and-Beauty/" target="_blank" rel="noopener" class="product-demo-link">
+            <i class="fa-solid fa-up-right-from-square"></i> 実物のマップを開く
+          </a>
+        </div>
+
+        <!-- 商品2: チラシ -->
+        <div class="product-card">
+          <span class="product-label"><i class="fa-solid fa-print"></i> その二・紙のチラシ</span>
+          <h3>メンバー紹介チラシ<br>（A4・印刷用データつき）</h3>
+          <p>
+            会場でお配りする紙のほうです。メンバー全員の顔と「何を相談できる人なのか」を、A4の1枚に収めます。
+            印刷用のデータまでお渡しするので、<strong>コンビニでも印刷所でも、そのまま出せます</strong>。
+          </p>
+          <ul class="product-points">
+            <li><i class="fa-solid fa-check"></i> 載せる内容の整理と、ひとりずつの紹介文（コピー）の執筆まで</li>
+            <li><i class="fa-solid fa-check"></i> 全員ぶんの写真配置・レイアウト・配色</li>
+            <li><i class="fa-solid fa-check"></i> マップへ飛ぶQRコードを紙面に配置</li>
+            <li><i class="fa-solid fa-check"></i> カラーでもモノクロでも読めるように文字の濃さを調整</li>
+            <li><i class="fa-solid fa-check"></i> 新しいメンバーが入られたら、差し替え版をお作りします</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">お値段のこと</h2>
+      </div>
+
+      <p class="price-scope">
+        マップは「会員紹介Webアプリ＋掲載フォーム＋更新の仕組み」まで、チラシは「デザイン＋コピー込み」で数えています。
+        比べていただきやすいよう、外の相場から順に3つ並べました。
+      </p>
+
+      <div class="price-grid">
+
+        <div class="price-card">
+          <div class="price-tier-name">一般的な外注（制作会社）の相場</div>
+          <div class="price-tier-sub">同じ内容を制作会社に頼んだ場合</div>
+          <div class="price-row">
+            <span class="price-item-name">マップ（Webアプリ）</span>
+            <span class="price-item-value">30〜60万円<small>＋ 保守 月5,000〜2万円</small></span>
+          </div>
+          <div class="price-row">
+            <span class="price-item-name">チラシ</span>
+            <span class="price-item-value">3〜5万円</span>
+          </div>
+          <p class="price-card-note">
+            マップは会員紹介Webアプリ＋掲載フォーム＋更新の仕組み、チラシはデザイン＋コピー込みで見積もった場合の、一般的な金額です。
+          </p>
+        </div>
+
+        <div class="price-card">
+          <div class="price-tier-name">ゆいどころ標準価格</div>
+          <div class="price-tier-sub">守成クラブ以外の団体・企業さまへ</div>
+          <div class="price-row">
+            <span class="price-item-name">マップ（Webアプリ）</span>
+            <span class="price-item-value">275,000円<small>（税込・買い切り）／ メンバー追加・差し替えは1回3,300円</small></span>
+          </div>
+          <div class="price-row">
+            <span class="price-item-name">ポスター</span>
+            <span class="price-item-value">16,500円<small>（税込）</small></span>
+          </div>
+          <p class="price-card-note">
+            設計から制作・公開・その後の更新まで、私ひとりで手を動かしています。間に人が入らないぶん、この金額でお受けできています。
+          </p>
+        </div>
+
+        <div class="price-card featured">
+          <div class="price-tier-name">守成クラブ特別価格</div>
+          <div class="price-tier-sub">守成クラブの会場・チームのみなさまへ</div>
+          <div class="price-row">
+            <span class="price-item-name">マップ（Webアプリ）</span>
+            <span class="price-item-value">98,000円<small>（税込・買い切り）</small></span>
+          </div>
+          <div class="price-row">
+            <span class="price-item-name">ポスター</span>
+            <span class="price-item-value">16,500円<small>（税込）</small></span>
+          </div>
+          <p class="price-card-note">
+            同じ守成の仲間なので、この金額にしています。1会場ぶんの型がすでにできていて、2会場目からは私の手間も減る、というのが正直な理由です。
+          </p>
+        </div>
+
+      </div>
+
+      <p class="price-footnote">
+        メンバーの追加・差し替えは1回3,300円（税込）です。年に何度も動きそうなチームには、年間サポート11,000円（税込）もご用意しています。<br>
+        写真や紹介文はGoogleフォームでメンバーのみなさんから集める形にできます。取りまとめの手間は、こちらで持ちます。<br>
+        税の扱いとお支払いの時期は、お申し込みの前に1枚の書面にしてお渡しします。
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-cta">
+        <h2>どちらから作るのがいいか、から一緒に決めませんか</h2>
+        <p>
+          いきなりお申し込みでなくて大丈夫です。「うちは◯人くらいなんですが、できますか？」くらいの粒度で構いません。
+          様子をお聞きしてから、マップとチラシのどちらが先か、そこからご一緒します。
+        </p>
+        <div class="cta-buttons">
+          <a href="https://line.me/R/ti/p/@304uicme" target="_blank" rel="noopener" class="btn-cta-primary">
+            <i class="fa-regular fa-comment-dots"></i> LINEで相談する
+          </a>
+        </div>
+        <p class="cta-note">
+          友だち追加して、ひとことメッセージを送るだけでだいじょうぶです。売り込みのご連絡はいたしません。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="./index.html" class="footer-back">
+        <i class="fa-solid fa-arrow-left-long"></i> 制作実績のページへ戻る
+      </a>
+      <p>&copy; 2026 比嘉なつき</p>
+    </div>
+  </footer>
+
+</body>
+</html>

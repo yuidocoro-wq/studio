@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本格手前味噌仕込み講座 | もとぶ糀の里工房 みら</title>
+  <meta name="description"
+    content="沖縄県本部町の丘の上で、木箱で蒸す国産大豆と自家製糀から仕込む本格手前味噌作り。毎回大人気のワークショップ。在校生・卒業生・一般どなたでもご参加いただけます。親子味噌作り・出張・団体貸切も承ります。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      /* 太陽と海と緑 ── やんばるの緑を主役に */
+      --green-pale: #eef6ee;
+      /* 若葉のうす緑 */
+      --green-mist: #e2f1e6;
+      /* 木漏れ日 */
+      --emerald: #1ba283;
+      /* エメラルド */
+      --emerald-pale: #e0f4ee;
+      --forest: #2a6e4f;
+      /* やんばるの緑 */
+      --forest-deep: #1c4f38;
+      /* 深い森 */
+      --sky: #edf8fb;
+      /* 澄んだ空 */
+      --sea: #1b94c4;
+      /* 美ら海ブルー */
+      --sea-deep: #0e6398;
+      --sun: #e8a13d;
+      /* 太陽 */
+      --white: #ffffff;
+      --ink: #2b3a32;
+      --ink-soft: #5a6c61;
+      --shadow: 0 8px 30px rgba(28, 79, 56, .10);
+      --radius: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 70px
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 2.1;
+      letter-spacing: .04em;
+      font-size: 15.5px;
+      -webkit-font-smoothing: antialiased;
+      line-break: strict;
+      overflow-wrap: break-word;
+      word-break: normal;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Noto Serif JP', serif
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    .inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    section {
+      padding: 84px 0
+    }
+
+    @media(max-width:600px) {
+      section {
+        padding: 60px 0
+      }
+    }
+
+    .wave {
+      display: block;
+      width: 100%;
+      height: 60px;
+      margin-bottom: -1px
+    }
+
+    @media(max-width:600px) {
+      .wave {
+        height: 36px
+      }
+    }
+
+    /* ---------- メニューバー ---------- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #dcebe0;
+    }
+
+    .nav-in {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+    }
+
+    .nav-brand {
+      font-family: 'Noto Serif JP', serif;
+      font-size: .95rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      color: var(--forest-deep);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: block;
+      font-size: .8rem;
+      font-weight: 400;
+      letter-spacing: .06em;
+      color: var(--ink-soft);
+      padding: 6px 10px;
+      border-radius: 999px;
+      transition: background .2s, color .2s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      background: var(--green-pale);
+      color: var(--forest)
+    }
+
+    .nav-links a.nav-line {
+      color: #fff;
+      font-weight: 500;
+      background: linear-gradient(135deg, #06c755, #05a648);
+      padding: 8px 16px;
+      margin-left: 4px;
+    }
+
+    .nav-links a.nav-line:hover {
+      opacity: .9;
+      background: linear-gradient(135deg, #06c755, #05a648);
+      color: #fff
+    }
+
+    .nav-burger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      position: relative;
+    }
+
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--forest-deep);
+      margin: 5px auto;
+      transition: transform .3s, opacity .3s;
+    }
+
+    .nav-burger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg)
+    }
+
+    .nav-burger.open span:nth-child(2) {
+      opacity: 0
+    }
+
+    .nav-burger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg)
+    }
+
+    @media(max-width:1160px) {
+      .nav-burger {
+        display: block
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(255, 255, 255, .98);
+        border-bottom: 1px solid #dcebe0;
+        box-shadow: 0 14px 30px rgba(28, 79, 56, .12);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease;
+      }
+
+      .nav-links.open {
+        max-height: 480px
+      }
+
+      .nav-links a {
+        padding: 16px 28px;
+        border-radius: 0;
+        border-top: 1px solid #ecf4ee;
+        font-size: .92rem;
+        white-space: normal;
+      }
+
+      .nav-links a.nav-line {
+        margin: 14px 24px 20px;
+        border-radius: 999px;
+        text-align: center;
+        padding: 14px 20px;
+      }
+    }
+
+    /* ---------- 見出し ---------- */
+    .sec-label {
+      display: block;
+      text-align: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: .85rem;
+      letter-spacing: .35em;
+      color: var(--emerald);
+      margin-bottom: 14px;
+    }
+
+    .sec-title {
+      text-align: center;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--forest-deep);
+      line-height: 1.9;
+      letter-spacing: .08em;
+      margin-bottom: 40px;
+    }
+
+    .sec-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      margin: 24px auto 0;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--forest), var(--emerald), var(--sea));
+    }
+
+    @media(max-width:600px) {
+      .sec-title {
+        font-size: 1.3rem
+      }
+    }
+
+    .copy p {
+      margin-bottom: 1.8em
+    }
+
+    .copy p:last-child {
+      margin-bottom: 0
+    }
+
+    .em {
+      font-weight: 500;
+      color: var(--forest);
+      background: linear-gradient(transparent 68%, #c9ecdb 68%);
+      padding: 0 .1em;
+    }
+
+    /* ---------- ヒーロー ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      background:
+        radial-gradient(620px 320px at 90% 2%, rgba(232, 161, 61, .22), transparent 65%),
+        radial-gradient(900px 540px at -12% 105%, rgba(27, 148, 196, .14), transparent 60%),
+        linear-gradient(180deg, #d8eedd 0%, var(--green-pale) 45%, var(--white) 100%);
+      padding: 88px 0 0;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--forest), var(--emerald));
+      border-radius: 999px;
+      padding: 6px 22px;
+      margin-bottom: 26px;
+      box-shadow: 0 6px 16px rgba(27, 162, 131, .3);
+    }
+
+    .hero-brand {
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: .92rem;
+      letter-spacing: .38em;
+      color: var(--forest);
+      margin-bottom: 30px;
+    }
+
+    .hero h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 2.05;
+      letter-spacing: .1em;
+      color: var(--forest-deep);
+      margin-bottom: 26px;
+    }
+
+    .hero h1 .hero-sub {
+      display: block;
+      margin-top: 18px;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--forest);
+    }
+
+    .hero-lead {
+      font-size: .95rem;
+      line-height: 2.3;
+      color: var(--ink-soft);
+      margin-bottom: 36px;
+    }
+
+    .hero .cta-btn {
+      margin-bottom: 54px
+    }
+
+    .hero-img {
+      max-width: 880px;
+      margin: 0 auto;
+      border-radius: 24px 24px 0 0;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(28, 79, 56, .18);
+    }
+
+    @media(max-width:600px) {
+      .hero {
+        padding-top: 60px
+      }
+
+      .hero h1 {
+        font-size: 1.3rem
+      }
+
+      .hero h1 .hero-sub {
+        font-size: 1rem
+      }
+    }
+
+    /* ---------- 共感チェックリスト ---------- */
+    .empathy {
+      background: var(--white);
+      padding-top: 70px
+    }
+
+    .checklist {
+      list-style: none;
+      max-width: 620px;
+      margin: 0 auto 44px;
+    }
+
+    .checklist li {
+      position: relative;
+      background: var(--green-pale);
+      border-radius: 14px;
+      padding: 18px 22px 18px 58px;
+      margin-bottom: 14px;
+      font-size: .95rem;
+      line-height: 1.9;
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      width: 22px;
+      height: 22px;
+      margin-top: -11px;
+      border-radius: 50%;
+      border: 3px solid var(--sun);
+      background: transparent;
+      box-sizing: border-box;
+    }
+
+    .checklist li::after {
+      content: "";
+      position: absolute;
+      left: 26px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      margin-top: -5px;
+      border-radius: 50%;
+      background: var(--sun);
+      box-sizing: border-box;
+    }
+
+    .empathy-close {
+      text-align: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--forest-deep);
+      line-height: 2.2;
+    }
+
+    /* ---------- 想い ---------- */
+    .philosophy {
+      background: var(--green-pale)
+    }
+
+    .philosophy .statement {
+      text-align: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--forest-deep);
+      line-height: 2.2;
+      margin-bottom: 38px;
+    }
+
+    @media(max-width:600px) {
+      .philosophy .statement {
+        font-size: 1.15rem
+      }
+    }
+
+    .photo-frame {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-top: 48px;
+    }
+
+    /* ---------- 3つのこだわり ---------- */
+    .points {
+      background: var(--white)
+    }
+
+    .point {
+      background: var(--white);
+      border: 1px solid #ddebe0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 48px 40px;
+      margin-bottom: 44px;
+    }
+
+    .point:last-child {
+      margin-bottom: 0
+    }
+
+    @media(max-width:600px) {
+      .point {
+        padding: 36px 24px
+      }
+    }
+
+    .point-num {
+      display: inline-block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: .85rem;
+      letter-spacing: .3em;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--forest), var(--emerald));
+      border-radius: 999px;
+      padding: 4px 20px;
+      margin-bottom: 20px;
+    }
+
+    .point h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--forest-deep);
+      line-height: 1.9;
+      margin-bottom: 22px;
+    }
+
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 28px 0;
+    }
+
+    @media(max-width:540px) {
+      .compare {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .compare div {
+      border-radius: 14px;
+      padding: 20px 18px;
+      font-size: .88rem;
+      line-height: 2;
+    }
+
+    .compare .niru {
+      background: #f4f3ef;
+      color: var(--ink-soft);
+      border: 1px solid #e5e2d8;
+    }
+
+    .compare .musu {
+      background: linear-gradient(150deg, var(--emerald-pale), var(--green-mist));
+      border: 1px solid #9adcc4;
+      color: var(--forest-deep);
+    }
+
+    .compare strong {
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .fufu-photo {
+      margin-top: 34px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--emerald-pale);
+    }
+
+    .fufu-caption {
+      text-align: center;
+      font-size: .8rem;
+      color: var(--ink-soft);
+      margin-top: 12px;
+      letter-spacing: .08em;
+    }
+
+    /* ---------- 親子フォトギャラリー ---------- */
+    .oyako-gallery{
+      display:grid;grid-template-columns:1fr 1fr;gap:16px;
+      margin:40px 0;
+      align-items: center;
+    }
+    @media(max-width:540px){.oyako-gallery{grid-template-columns:1fr;gap:20px}}
+    .oyako-gallery-item{
+      border-radius:var(--radius);overflow:hidden;
+      box-shadow:var(--shadow);
+      position:relative;
+    }
+    .oyako-gallery-item img{
+      width:100%;height:100%;object-fit:cover;
+      transition:transform .4s ease;
+    }
+    .oyako-gallery-item.ratio-3-4 img {
+      aspect-ratio: 3/4;
+    }
+    .oyako-gallery-item.ratio-4-3 img {
+      aspect-ratio: 4/3;
+    }
+    .oyako-gallery-item:hover img{transform:scale(1.03)}
+    .oyako-gallery-caption{
+      position:absolute;bottom:0;left:0;right:0;
+      background:linear-gradient(transparent,rgba(28,79,56,.7));
+      color:#fff;padding:24px 16px 14px;
+      font-size:.82rem;font-weight:400;letter-spacing:.06em;
+      line-height:1.6;
+    }
+
+    /* ---------- 白味噌プロダクトショーケース ---------- */
+    .product-showcase{
+      margin:44px 0 40px;
+      text-align:center;
+    }
+    .product-showcase-frame{
+      display:inline-block;
+      border-radius:var(--radius);overflow:hidden;
+      box-shadow:var(--shadow);
+      max-width:420px;
+      width:100%;
+      background:var(--white);
+      border:1px solid #dcebe0;
+    }
+    .product-showcase-frame img{
+      width:100%;height:auto;
+    }
+    .product-showcase-label{
+      padding:16px 20px;
+      font-family:'Noto Serif JP',serif;
+      font-size:.95rem;font-weight:600;
+      color:var(--forest-deep);
+      letter-spacing:.12em;
+      background:linear-gradient(135deg,#fdf8ef,#f9f1e0);
+      border-top:1px solid #ecd9b8;
+    }
+
+    /* ---------- 子育て ---------- */
+    .kosodate {
+      background: var(--green-pale)
+    }
+
+    .kosodate-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 46px 38px;
+      box-shadow: var(--shadow);
+      border-top: 5px solid;
+      border-image: linear-gradient(90deg, var(--forest), var(--emerald)) 1;
+    }
+
+    @media(max-width:600px) {
+      .kosodate-card {
+        padding: 34px 24px
+      }
+    }
+
+    /* ---------- 開催概要・持参物 ---------- */
+    .details {
+      background: var(--white)
+    }
+
+    .detail-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid #dcebe0;
+      margin-bottom: 40px;
+    }
+
+    .detail-table th,
+    .detail-table td {
+      padding: 22px 24px;
+      text-align: left;
+      border-bottom: 1px solid #e6f1e9;
+      font-size: .93rem;
+      line-height: 2;
+    }
+
+    .detail-table tr:last-child th,
+    .detail-table tr:last-child td {
+      border-bottom: none
+    }
+
+    .detail-table th {
+      width: 32%;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 600;
+      color: var(--forest);
+      background: var(--green-pale);
+      white-space: nowrap;
+      vertical-align: top;
+    }
+
+    @media(max-width:540px) {
+
+      .detail-table th,
+      .detail-table td {
+        display: block;
+        width: 100%;
+        padding: 14px 20px
+      }
+
+      .detail-table th {
+        padding-bottom: 10px
+      }
+    }
+
+    .bring-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 6px 0 2px;
+    }
+
+    @media(max-width:540px) {
+      .bring-list {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .bring-list li {
+      position: relative;
+      background: var(--green-pale);
+      border-radius: 10px;
+      padding: 10px 14px 10px 36px;
+      font-size: .88rem;
+      line-height: 1.8;
+    }
+
+    .bring-list li::before {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      margin-top: -4px;
+      border-radius: 50%;
+      background: var(--emerald);
+    }
+
+    .bring-list li.fun {
+      background: linear-gradient(135deg, #fdf3e3, #fbeacb);
+    }
+
+    .bring-list li.fun::before {
+      background: var(--sun)
+    }
+
+    .notice-box {
+      background: #fdf8ef;
+      border: 1px solid #ecd9b8;
+      border-radius: 14px;
+      padding: 28px 30px;
+      font-size: .9rem;
+      margin-bottom: 24px;
+    }
+
+    .notice-box h4 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #8a6a2f;
+      margin-bottom: 14px;
+      letter-spacing: .1em;
+    }
+
+    .notice-box ul {
+      list-style: none
+    }
+
+    .notice-box li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      line-height: 1.9;
+    }
+
+    .notice-box li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: .85em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sun);
+    }
+
+    .policy-box {
+      background: var(--white);
+      border: 1px solid #dcebe0;
+      border-left: 5px solid var(--emerald);
+      border-radius: 0 14px 14px 0;
+      padding: 30px 32px;
+      font-size: .9rem;
+      box-shadow: var(--shadow);
+    }
+
+    .policy-box h4 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--forest-deep);
+      margin-bottom: 14px;
+      letter-spacing: .1em;
+    }
+
+    .policy-box p {
+      margin-bottom: 1.4em
+    }
+
+    .policy-box p:last-child {
+      margin-bottom: 0
+    }
+
+    /* ---------- 親子 ---------- */
+    .oyako {
+      background:
+        radial-gradient(700px 360px at 100% 0%, rgba(232, 161, 61, .15), transparent 60%),
+        linear-gradient(180deg, var(--emerald-pale), var(--green-pale));
+    }
+
+    .oyako-badge {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 22px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: .85rem;
+      letter-spacing: .25em;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--sun), #d68a26);
+      border-radius: 999px;
+      padding: 6px 26px;
+      box-shadow: 0 6px 18px rgba(232, 161, 61, .35);
+    }
+
+    .gift-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 46px 40px;
+      margin-top: 44px;
+      border-top: 5px solid;
+      border-image: linear-gradient(90deg, var(--sun), var(--emerald), var(--forest)) 1;
+    }
+
+    @media(max-width:600px) {
+      .gift-card {
+        padding: 34px 24px
+      }
+    }
+
+    .gift-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--forest-deep);
+      line-height: 2;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    /* ---------- 出汁 ---------- */
+    .dashi {
+      background: var(--white)
+    }
+
+    .dashi-banner {
+      text-align: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--sea-deep);
+      margin-bottom: 36px;
+      letter-spacing: .12em;
+    }
+
+    /* ---------- 出張・団体 ---------- */
+    .group {
+      background: var(--green-pale)
+    }
+
+    .group-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 42px 38px;
+      margin-bottom: 30px;
+    }
+
+    .group-card:last-of-type {
+      margin-bottom: 0
+    }
+
+    @media(max-width:600px) {
+      .group-card {
+        padding: 32px 24px
+      }
+    }
+
+    .group-card h3 {
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--forest-deep);
+      margin-bottom: 18px;
+      line-height: 1.9;
+      padding-left: 16px;
+      border-left: 4px solid var(--emerald);
+    }
+
+    /* ---------- CTA ---------- */
+    .cta-btn {
+      display: block;
+      max-width: 420px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: .1em;
+      color: var(--white);
+      background: linear-gradient(135deg, #06c755, #05a648);
+      border-radius: 999px;
+      padding: 20px 36px;
+      box-shadow: 0 12px 30px rgba(6, 199, 85, .35);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(6, 199, 85, .45)
+    }
+
+    .cta-btn.sub {
+      background: linear-gradient(135deg, var(--emerald), var(--forest));
+      box-shadow: 0 12px 30px rgba(42, 110, 79, .3);
+    }
+
+    .cta-note {
+      text-align: center;
+      font-size: .85rem;
+      color: var(--ink-soft);
+      margin-top: 18px;
+    }
+
+    .cta-section {
+      position: relative;
+      text-align: center;
+      color: var(--white);
+      background:
+        radial-gradient(700px 380px at 85% -10%, rgba(232, 161, 61, .2), transparent 60%),
+        linear-gradient(150deg, var(--forest-deep) 0%, var(--forest) 45%, var(--emerald) 100%);
+    }
+
+    .cta-section .sec-title {
+      color: var(--white)
+    }
+
+    .cta-section .sec-title::after {
+      background: rgba(255, 255, 255, .7)
+    }
+
+    .cta-section .cta-note {
+      color: rgba(255, 255, 255, .85)
+    }
+
+    .cta-section .copy {
+      color: rgba(255, 255, 255, .92);
+      margin-bottom: 40px
+    }
+
+    /* ---------- フッター ---------- */
+    footer {
+      background: var(--forest-deep);
+      color: rgba(255, 255, 255, .88);
+      text-align: center;
+      padding: 54px 24px 60px;
+      font-size: .85rem;
+      line-height: 2.2;
+    }
+
+    footer .brand {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: .2em;
+      margin-bottom: 16px;
+    }
+
+    footer .slogan {
+      color: #8fd9be
+    }
+
+    .instagram-section {
+      background: var(--white);
+      padding: 60px 24px;
+      text-align: center;
+      border-top: 1px solid #dcebe0;
+    }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      max-width: 1000px;
+      margin: 32px auto;
+    }
+    @media(max-width:768px) {
+      .instagram-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+    }
+    .instagram-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(28, 79, 56, 0.06);
+      position: relative;
+      aspect-ratio: 1/1;
+    }
+    .instagram-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s, filter 0.4s;
+    }
+    .instagram-item:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.9);
+    }
+    .instagram-btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+    .instagram-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--white);
+      border: 2px solid #e1306c;
+      color: #e1306c;
+      padding: 12px 24px;
+      border-radius: 36px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      width: 320px;
+      max-width: 100%;
+      box-sizing: border-box;
+      box-shadow: 0 4px 12px rgba(225, 48, 108, 0.1);
+      line-height: 1.45;
+      text-align: left;
+    }
+    .instagram-btn:hover {
+      background: #e1306c;
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(225, 48, 108, 0.25);
+    }
+    .instagram-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .ib {
+      display: inline-block
+    }
+
+    .pc-only {
+      display: inline
+    }
+
+    .sp-only {
+      display: none
+    }
+
+    @media(max-width:600px) {
+      .pc-only {
+        display: none
+      }
+
+      .sp-only {
+        display: inline
+      }
+    }
+
+    /* ---------- 容器選びアコーディオン ---------- */
+    .vessel-accordion {
+      margin-top: 32px;
+      background: var(--white);
+      border: 1px solid #dcebe0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: border-color 0.3s;
+    }
+
+    .vessel-accordion[open] {
+      border-color: var(--emerald);
+    }
+
+    .vessel-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 24px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--forest-deep);
+      cursor: pointer;
+      list-style: none;
+      outline: none;
+      user-select: none;
+    }
+
+    .vessel-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .vessel-arrow {
+      font-size: 1.2rem;
+      color: var(--emerald);
+      transition: transform 0.3s;
+      font-weight: normal;
+    }
+
+    .vessel-accordion[open] .vessel-arrow {
+      transform: rotate(45deg);
+    }
+
+    .vessel-content {
+      padding: 0 24px 28px;
+      animation: fadeSlide 0.3s ease forwards;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .vessel-guide-img-wrapper {
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .vessel-guide-img {
+      max-width: 100%;
+      width: 500px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(28, 79, 56, 0.08);
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* ---------- 写真グリッド（2枚並列） ---------- */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 32px 0 12px;
+    }
+
+    @media(max-width:600px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+
+    .photo-grid img {
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(28, 79, 56, .10);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+
+    .photo-grid-caption {
+      text-align: center;
+      font-size: .78rem;
+      color: var(--ink-soft);
+      margin-top: 8px;
+      letter-spacing: .06em;
+      grid-column: 1 / -1;
+    }
+
+    /* ---------- セクション内インライン写真 ---------- */
+    .section-photo {
+      margin: 32px 0 12px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .section-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .section-photo-caption {
+      text-align: center;
+      font-size: .78rem;
+      color: var(--ink-soft);
+      margin-top: 10px;
+      letter-spacing: .06em;
+    }
+
+    /* ---------- CTA前写真 ---------- */
+    .cta-photo {
+      max-width: 480px;
+      margin: 0 auto 36px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(28, 79, 56, .18);
+    }
+
+    .cta-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .cta-photo-caption {
+      text-align: center;
+      font-size: .82rem;
+      color: rgba(255, 255, 255, .8);
+      margin-top: 14px;
+      letter-spacing: .12em;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- メニューバー -->
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="nav-brand" href="#top">もとぶ糀の里工房 みら</a>
+      <button class="nav-burger" id="navBurger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#omoi">わたしたちの想い</a></li>
+        <li><a href="#kodawari">3つのこだわり</a></li>
+        <li><a href="#kosodate">大切にしていること</a></li>
+        <li><a href="#kouza">開催概要</a></li>
+        <li><a href="#oyako">親子味噌作り</a></li>
+        <li><a href="#dashi">出汁体験</a></li>
+        <li><a href="#group">出張・団体</a></li>
+        <li><a class="nav-line" href="https://select-type.com/e/?id=QAhUP2po6Kc&eventPageID=" target="_blank" rel="noopener">体験お申し込み</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <header class="hero" id="top">
+    <div class="inner">
+      <span class="hero-badge">毎回大人気のみそ作り体験教室｜どなたでもご参加いただけます</span>
+      <div
+        style="max-width: 100px; margin: 0 auto 16px; border-radius: 50%; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 2px solid #fff;">
+        <img src="images/もとぶ糀　ロゴまーく.jpg" alt="もとぶ糀 ロゴ" style="width: 100%; height: auto;">
+      </div>
+      <p class="hero-brand">もとぶ糀の里工房 みら</p>
+      <h1>
+        <span class="ib">昔ながらの木箱で蒸す</span><span class="ib">国産大豆と、</span><br class="pc-only"><span
+          class="ib">大切に育てた糀。</span>
+        <span class="hero-sub"><span class="ib">本部町の丘の上で</span><span class="ib">仕込む、</span><br class="pc-only"><span
+            class="ib">本格手前みそ作り体験教室</span></span>
+      </h1>
+      <p class="hero-lead">
+        <span class="ib">スーパーでは決して買えない</span><span class="ib">「世界に一つだけの味」を、</span><br class="pc-only">
+        <span class="ib">やんばるの澄んだ空気の中で、</span><span class="ib">自分の手で仕込みませんか。</span>
+      </p>
+      <a class="cta-btn" href="https://select-type.com/e/?id=QAhUP2po6Kc&eventPageID=" target="_blank" rel="noopener">体験お申し込みはこちら</a>
+    </div>
+    <div class="hero-img">
+      <img src="images/もとぶ糀の里工房　みら　トップ.png" alt="もとぶ糀の里工房 みら ── 青空と緑に包まれた工房外観">
+    </div>
+  </header>
+
+  <!-- 共感ブロック -->
+  <section class="empathy">
+    <div class="inner">
+      <span class="sec-label">発酵が大好きな方はもちろん、日常の中でこのようなきっかけからご参加される方も多いです</span>
+
+      <ul class="checklist">
+        <li>こだわりの自家製糀や木箱の蒸し大豆で、さらに一歩深めた発酵ライフを楽しみたい</li>
+        <li>毎日の食事が、いつのまにか「こなすだけ」になっている</li>
+        <li>子どもには、本物の味と食の体験を残してあげたい</li>
+        <li>発酵食に興味はあるけれど、何から始めればいいか分からない</li>
+        <li>スマホや仕事から離れて、手を動かす時間が欲しい</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- 波 -->
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C240,60 480,0 720,20 C960,40 1200,10 1440,30 L1440,60 L0,60 Z" fill="#eef6ee" />
+  </svg>
+
+  <!-- わたしたちの想い -->
+  <section class="philosophy" style="padding-top:40px" id="omoi">
+    <div class="inner">
+      <span class="sec-label">わたしたちの想い</span>
+      <p class="statement">
+        <span class="ib">自分で仕込んだ</span><span class="ib">お味噌で作る</span><span class="ib">お味噌汁は、</span><br class="pc-only">
+        <span class="ib">家庭でできる</span><br class="sp-only"><span class="ib">最高の食育です。</span>
+      </p>
+      <div class="copy">
+        <p>
+          こだわりの材料に、こだわりの製法。<br class="pc-only">
+          そこに「自分自身の手」を加えること。
+        </p>
+        <p>
+          仕込んだその日から、<br class="pc-only">
+          お味噌がゆっくりと美味しく熟成していく、<span class="em">愛おしい時間</span>がはじまります。
+        </p>
+        <p>
+          <span class="ib">日本人に一番</span><span class="ib">馴染みのある</span><span class="ib">お味噌から、</span><br class="pc-only">
+          <span class="ib">発酵食を知る</span><span class="ib">きっかけや、</span><span class="ib">発酵を楽しむ</span><span
+            class="ib">暮らしへ。</span>
+        </p>
+        <p>
+          <span class="ib">手間ひまをかける</span><span class="ib">楽しさと、</span><span class="ib">格別の美味しさを、</span><br
+            class="pc-only">
+          ぜひ体験しにいらしてください。
+        </p>
+      </div>
+      <div class="photo-frame">
+        <img src="images/motobukouji_shokuzen.jpg" alt="自分で仕込んだお味噌で作る、心もからだも満たされる食卓">
+      </div>
+    </div>
+  </section>
+
+  <!-- 波 -->
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+    style="background:#eef6ee">
+    <path d="M0,30 C240,0 480,60 720,40 C960,20 1200,50 1440,30 L1440,60 L0,60 Z" fill="#ffffff" />
+  </svg>
+
+  <!-- 3つのこだわり -->
+  <section class="points" style="padding-top:40px" id="kodawari">
+    <div class="inner">
+      <span class="sec-label">選ばれる理由</span>
+      <h2 class="sec-title"><span class="ib">沖縄・ここでしか</span><span class="ib">出会えない</span><br class="pc-only"><span
+          class="ib">3つのこだわり</span></h2>
+
+      <div class="photo-frame" style="margin-bottom:44px;margin-top:0">
+        <img src="images/motobukouji_misodama.jpeg" alt="仕込むお味噌の様子">
+      </div>
+
+      <!-- こだわり 一 -->
+      <div class="point copy">
+        <span class="point-num">こだわり 一</span>
+        <h3>昔ながらの木箱で、じっくり「蒸す」国産大豆</h3>
+        <p>
+          ご存じでしょうか。<br class="pc-only">
+          <span class="ib">一般的な</span><span class="ib">味噌作りの多くは、</span><span class="ib">大豆をたっぷりの</span><span
+            class="ib">お湯で</span><span class="ib">「煮る」やり方です。</span>
+        </p>
+        <p>
+          でも煮てしまうと、大豆の大切な栄養や旨味が、<br class="pc-only">
+          煮汁の中へ逃げていってしまうのです。
+        </p>
+        <div class="compare">
+          <div class="niru">
+            <strong>煮大豆</strong>
+            栄養と旨味が煮汁に溶け出してしまい、大豆の味がぼやけがちに。
+          </div>
+          <div class="musu">
+            <strong>もとぶ糀の蒸し大豆</strong>
+            <span class="ib">栄養を逃さず、</span><span class="ib">大豆本来の</span><span class="ib">「甘み」「コク」</span><span
+              class="ib">「栄養素」を</span><span class="ib">最大限に引き出します。</span>
+          </div>
+        </div>
+        <p>
+          <span class="ib">だから私たちは、</span><span class="ib">昔ながらの木箱で</span><br class="pc-only">
+          <span class="ib">じっくり「蒸す」ことに</span><span class="ib">こだわっています。</span>
+        </p>
+        <p>
+          木箱のふたを開けた瞬間にふわっと立ちのぼる、<br class="pc-only">
+          大豆のふくよかで甘い香り。
+        </p>
+        <p>
+          手のひらにのせてつぶせば、ほっくりとあたたかく、<br class="pc-only">
+          そのまま食べても驚くほど甘いのです。
+        </p>
+        <div class="photo-grid">
+          <img src="images/木箱で蒸し大豆.jpg" alt="昔ながらの木箱から蒸気が立ちのぼる ── 大豆を蒸す工程">
+          <img src="images/もとぶ糀　蒸し大豆.jpg" alt="木箱の中でふっくら蒸し上がった国産大豆">
+          <span class="photo-grid-caption">木箱で蒸すから、大豆の旨味と栄養をまるごと閉じ込めます</span>
+        </div>
+      </div>
+
+      <!-- こだわり 二 -->
+      <div class="point copy">
+        <span class="point-num">こだわり 二</span>
+        <h3>工房で愛情を込めて育てた自家製糀</h3>
+        <p>
+          糀は、温度と湿度にとても敏感な,繊細な存在。<br class="pc-only">
+          私たちは毎日様子を見ながら、大切に大切に育てています。
+        </p>
+        <p>
+          丹精込めた糀の豊かな発酵力が、<br class="pc-only">
+          お味噌に極上の旨味と、芳醇な香りをもたらしてくれます。
+        </p>
+        <p>
+          ほろほろと手のひらでほどける糀のやわらかさ、<br class="pc-only">
+          ほんのり甘い栗のような香りも、ぜひ感じてみてください。
+        </p>
+        <div class="photo-grid">
+          <img src="images/もとぶ糀　糀菌たち.jpg" alt="さらさらと輝く自家製米糀">
+          <img src="images/もとぶ糀　糀菌たち２.jpg" alt="ほろほろと手のひらでほどける糀ブロック">
+          <span class="photo-grid-caption">愛情を込めて育てた自家製糀。ほのかに甘い栗のような香りが広がります</span>
+        </div>
+      </div>
+
+      <!-- こだわり 三 -->
+      <div class="point copy">
+        <span class="point-num">こだわり 三</span>
+        <h3><span class="ib">やんばるの自然に</span><span class="ib">抱かれて、</span><br class="pc-only"><span
+            class="ib">「手仕事」で</span><span class="ib">心をほどく</span><span class="ib">癒しの時間</span></h3>
+        <p>
+          大人も子どもも、お仕事や家事、毎日の食事が、<br class="pc-only">
+          いつのまにか「慣れた日常」になっていませんか。
+        </p>
+        <p>
+          私たちがお届けしたいのは、<br class="pc-only">
+          忘れかけていた「手仕事」というリアルな体験。
+        </p>
+        <p>
+          手を動かす楽しさ、誰かと一緒に作る喜び、<br class="pc-only">
+          人と会って笑い合えることの幸せです。
+        </p>
+        <p>
+          美ら海水族館にもほど近い、やんばるの自然に囲まれた丘の上。<br class="pc-only">
+          心地よい風と小鳥のさえずりに包まれた工房で。
+        </p>
+        <p>
+          <span class="em">人と交流すること。菌と交流すること。</span>
+        </p>
+        <p>
+          そのどちらもが、日々のストレスを<br class="pc-only">
+          心地よくゆるめてくれることを、私たちは知っています。
+        </p>
+        <p>
+          「初めてだから不安…」「不器用だから心配…」という方も、<br class="pc-only">
+          どうぞ安心してください。
+        </p>
+        <p>
+          おひとりおひとりに寄り添う<span class="em">丁寧で手厚いフォロー</span>で、<br class="pc-only">
+          どなたでも美味しく仕込めるよう、私たち夫婦がお手伝いします。
+        </p>
+        <div class="fufu-photo">
+          <img src="images/もとぶ糀　夫妻.jpg" alt="もとぶ糀の里を主宰する嘉手苅夫妻 ── 看板の前で自家製の米糀と玄米糀を手に笑顔">
+        </div>
+        <p class="fufu-caption">もとぶ糀の里を主宰する、嘉手苅 基・舞子です。お会いできるのを楽しみにしています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 波 -->
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C240,60 480,0 720,20 C960,40 1200,10 1440,30 L1440,60 L0,60 Z" fill="#eef6ee" />
+  </svg>
+
+  <!-- お味噌作りは子育てと一緒 -->
+  <section class="kosodate" style="padding-top:40px" id="kosodate">
+    <div class="inner">
+      <span class="sec-label">大切にしていること</span>
+      <h2 class="sec-title"><span class="ib">お味噌作りは、</span><br class="pc-only"><span class="ib">子育てと一緒です。</span></h2>
+      <div class="kosodate-card copy">
+        <p>
+          <span class="ib">お味噌の上下を</span><span class="ib">そっと入れ替えて、</span><br class="pc-only">
+          <span class="ib">空気に触れさせて</span><span class="ib">あげる「天地返し」。</span>
+        </p>
+        <p>
+          <span class="ib">発酵の進み具合を、</span><br class="pc-only">
+          <span class="ib">色と香りで感じとる</span><span class="ib">「見極め」。</span>
+        </p>
+        <p>
+          <span class="ib">どちらも、</span><span class="ib">子育てと同じだなあと</span><br class="pc-only">
+          <span class="ib">私たちはいつも思うのです。</span>
+        </p>
+        <p>
+          <span class="em">正解を急がず、手をかけ、じっくり見守り、待つこと。</span>
+        </p>
+        <p>
+          <span class="ib">仕込んだお味噌を</span><span class="ib">おうちで見守る毎日は、</span><br class="pc-only">
+          <span class="ib">わが子の成長を</span><span class="ib">見守るように愛おしくて。</span>
+        </p>
+        <p>
+          <span class="ib">気づけばお味噌との間に、</span><br class="pc-only">
+          <span class="ib">深い絆が育っています。</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 波 -->
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+    style="background:#eef6ee">
+    <path d="M0,30 C240,0 480,60 720,40 C960,20 1200,50 1440,30 L1440,60 L0,60 Z" fill="#ffffff" />
+  </svg>
+
+  <!-- 開催概要 -->
+  <section class="details" style="padding-top:40px" id="kouza">
+    <div class="inner">
+      <span class="sec-label">開催概要</span>
+      <h2 class="sec-title">本格手前味噌仕込み講座</h2>
+      <table class="detail-table">
+        <tr>
+          <th>開催場所</th>
+          <td>もとぶ糀の里工房 みら<br>（沖縄県本部町渡久地311番地）</td>
+        </tr>
+        <tr>
+          <th>参加費</th>
+          <td>玄米完熟味噌(4kg) ￥8,500 / 白味噌(4kg) ￥8,500<br>（発酵デザート・レシピ込み）</td>
+        </tr>
+        <tr>
+          <th>所要時間</th>
+          <td>約3時間</td>
+        </tr>
+        <tr>
+          <th>お持ち帰り</th>
+          <td>ご自身で仕込んだ手前味噌 4kg <span style="font-size: 0.8rem; color: var(--ink-soft);">（2倍仕込みは8kg）</span></td>
+        </tr>
+        <tr>
+          <th>ご参加対象</th>
+          <td>在校生・卒業生・一般の方、どなたでもご参加いただけます</td>
+        </tr>
+        <tr>
+          <th>持参物</th>
+          <td>
+            <ul class="bring-list">
+              <li>エプロン</li>
+              <li>頭巾（三角巾）</li>
+              <li>手ぬぐい 2枚</li>
+              <li>筆記用具</li>
+              <li>味噌容器 <span style="font-size: 0.8rem; color: var(--emerald); font-weight: 500;">（※選び方は下記参照）</span></li>
+              <li class="fun">そして、気合いと愛情</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <!-- 白味噌プロダクトショーケース -->
+      <div class="product-showcase">
+        <div class="product-showcase-frame">
+          <img src="images/motobukouji_shiromiso.jpg" alt="もとぶ糀の白味噌 ─ 自家製糀と国産大豆で仕込む上品な甘さ">
+          <div class="product-showcase-label">✨ もとぶ糀の白味噌 ─ 上品な甘さと芳醇な香り</div>
+        </div>
+      </div>
+
+      <!-- 容器選びアコーディオン -->
+      <details class="vessel-accordion">
+        <summary class="vessel-summary">
+          <span>🥣 味噌を入れる容器について（初めて買う方へ）</span>
+          <span class="vessel-arrow">＋</span>
+        </summary>
+        <div class="vessel-content">
+          <div class="vessel-guide-img-wrapper">
+            <img src="images/container_guide.jpg"
+              alt="味噌を入れる容器ガイド（新しく買う方へご参考ください。4kg仕込みの場合：5型・5L、2倍仕込みの場合：10型・10L。中蓋も入ってるか確認してください。メイクマンなどで買えますよ♪）"
+              class="vessel-guide-img">
+          </div>
+        </div>
+      </details>
+
+      <div class="notice-box">
+        <h4>ご参加にあたってのお願い</h4>
+        <ul>
+          <li>セーターでのご参加はご遠慮ください（仕込みの衛生上の理由です）</li>
+          <li>香水はお控えください（繊細な糀の香りを守り、発酵の過程の妨げにならないためです）</li>
+        </ul>
+      </div>
+
+      <div class="policy-box copy">
+        <h4>キャンセルについて（お申し込み前に必ずご確認ください）</h4>
+        <p>
+          食材の仕入れ・仕込み・準備の都合上、<br class="pc-only">
+          基本的にキャンセルの受付および返金はいたしかねます。
+        </p>
+        <p>
+          ご都合が合わなくなった場合も、ご安心ください。<br class="pc-only">
+          代行仕込み料（一樽 ￥1,000）にて私たちが心を込めて仕込み、<br class="pc-only">
+          あなたのお味噌をきちんとお渡しいたします。
+        </p>
+        <p>
+          スケジュールをご確認のうえ、お申し込みをお願いいたします。
+        </p>
+      </div>
+
+      <div style="margin-top:48px">
+        <a class="cta-btn" href="https://select-type.com/e/?id=QAhUP2po6Kc&eventPageID=" target="_blank" rel="noopener">体験お申し込みはこちら</a>
+        <p class="cta-note">ご予約・日程のお問い合わせは、LINE公式アカウントからどうぞ。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 親子味噌作り -->
+  <section class="oyako" id="oyako">
+    <div class="inner">
+      <span class="oyako-badge">次回：8月23日（日）開催</span>
+      <span class="sec-label">お子様連れ大歓迎</span>
+      <h2 class="sec-title">親子味噌作り</h2>
+
+      <!-- 追加：大きな文字でのコミュニケーションメッセージ -->
+      <div class="oyako-lead copy" style="text-align: center; margin-bottom: 32px;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 1.45rem; font-weight: 600; color: var(--forest-deep); line-height: 1.8; letter-spacing: 0.05em; margin-bottom: 0;">
+          <span class="ib">お味噌づくりが、</span><br class="sp-only">
+          <span class="ib">親子のかけがえのない</span><br class="pc-only">
+          <span class="ib">コミュニケーション時間に。</span>
+        </p>
+      </div>
+
+      <div class="copy">
+        <p>
+          お子様と一緒に思いきり楽しみたい方のための、特別な「親子味噌作り」の枠を随時開催しております✨
+        </p>
+        <p>
+          小さな手で大豆をつぶす、ぷにぷにとした感触。<br class="pc-only">
+          「いいにおい〜！」と顔を見合わせる瞬間。
+        </p>
+        <p>
+          忙しい日常から少し離れて、親子で同じ手仕事に向き合い、五感で対話する。<br class="pc-only">
+          そんな何気ない会話や笑顔のやり取りこそが、お互いの心を温かくつなぐ大切な時間になります。
+        </p>
+      </div>
+
+      <!-- 親子フォトギャラリー -->
+      <div class="oyako-gallery">
+        <div class="oyako-gallery-item ratio-3-4">
+          <img src="images/motobukouji_oyako_girl.jpg" alt="真剣な眼差しでお味噌を仕込む女の子">
+          <div class="oyako-gallery-caption">真剣な眼差しで、一生懸命</div>
+        </div>
+        <div class="oyako-gallery-item ratio-4-3">
+          <img src="images/motobukouji_oyako_kids.jpg" alt="笑顔で味噌玉を作る子どもたち">
+          <div class="oyako-gallery-caption">「できたよ！」─ 笑顔がはじける</div>
+        </div>
+      </div>
+
+      <div class="copy">
+        <p>
+          親子で一緒に手を動かした記憶は、<br class="pc-only">
+          お味噌と一緒に、ゆっくり熟成していきます。
+        </p>
+        <p>
+          ご希望に合わせて随時開催もしておりますので、<br class="pc-only">
+          お気軽にお問い合わせください。
+        </p>
+      </div>
+
+      <div style="margin-top:40px; text-align: center; margin-bottom: 40px;">
+        <p style="font-family: 'Noto Serif JP', serif; font-size: 1.25rem; font-weight: 600; color: var(--forest-deep); margin-bottom: 16px; letter-spacing: 0.05em;">
+          ✨ 次回親子みそ作り教室：<strong>8月23日（日）開催枠 受付中！</strong>
+        </p>
+        <a class="cta-btn" href="https://select-type.com/e/?id=QAhUP2po6Kc&eventPageID=" target="_blank" rel="noopener">親子みそ作りに申し込む</a>
+      </div>
+
+      <!-- 保育園・幼稚園・保護者さまへ -->
+      <div class="gift-card copy">
+        <h3><span class="ib">保育園・幼稚園の</span><span class="ib">みなさま、</span><br class="pc-only"><span
+            class="ib">保護者のみなさまへ</span></h3>
+        <p>
+          今の時代、画面の中のデジタルな体験が増える一方で、<br class="pc-only">
+          本物の土や自然、食べ物に触れる機会は、どんどん減っています。
+        </p>
+        <p>
+          いわゆる<span class="em">「体験格差」</span>という言葉を、<br class="pc-only">
+          私たちも他人事とは思えずにいます。
+        </p>
+        <p>
+          幼少期に、自然豊かな本部町で五感をフルに使って、<br class="pc-only">
+          自分の手で大豆をつぶし、菌に触れて、お味噌を仕込む。
+        </p>
+        <p>
+          その体験は、子どもたちが大人になったときの<br class="pc-only">
+          豊かな感性と<span class="em">「生きる力」</span>の土台になります。
+        </p>
+        <p>
+          <span class="ib">子どもたちに</span><span class="ib">この体験を</span><span class="ib">プレゼントすることは、</span><br
+            class="pc-only">
+          <span class="ib">親から、園から、</span><span class="ib">子どもたちへ贈る</span><br class="pc-only">
+          <span class="em">『最高のギフト（体験のプレゼント）』</span><span class="ib">だと、私たちは信じています。</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 波 -->
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+    style="background:#eef6ee">
+    <path d="M0,30 C240,0 480,60 720,40 C960,20 1200,50 1440,30 L1440,60 L0,60 Z" fill="#ffffff" />
+  </svg>
+
+  <!-- 出汁・味覚体験 -->
+  <section class="dashi" style="padding-top:40px" id="dashi">
+    <div class="inner">
+      <span class="sec-label">味覚の体験</span>
+      <p class="dashi-banner">「お味噌汁をごちそうに変える、もう一つの主役」</p>
+      <h2 class="sec-title"><span class="ib">削りたての鰹節と</span><span class="ib">熟成味噌。</span><br class="pc-only"><span
+          class="ib">優しさに包まれる、</span><span class="ib">本物の味噌汁体験</span></h2>
+      <div class="copy">
+        <p>
+          味噌仕込みの作業が終わった後には、<br class="pc-only">
+          あたたかいお味噌汁の試飲を楽しんでいただきます。
+        </p>
+        <p>
+          このお味噌汁の美味しさを引き立てるのが、<br class="pc-only">
+          本部町の名産である「カツオ節」で贅沢にひいた極上の出汁です。
+        </p>
+        <p>
+          本部町は、古くから鰹漁で栄えてきた歴史ある町。<br class="pc-only">
+          ここで作られる鰹節は、削りたてをそのままで、ぜひ手でつまんで食べてみてください。<br class="pc-only">
+          それだけでも、口いっぱいに広がる豊かな香りと旨味にきっと驚かれるはずです。
+        </p>
+        <p>
+          <span class="ib">その上質な鰹節から</span><span class="ib">丁寧にひいた</span><span class="ib">黄金色の出汁に、</span><br
+            class="pc-only">
+          <span class="ib">私たちが</span><span class="ib">愛情を込めて</span><span class="ib">じっくり育てた</span><span
+            class="ib">「もとぶ糀の</span><span class="ib">熟成味噌」を</span><span class="ib">そっと溶かし入れる。</span>
+        </p>
+        <p>
+          <span class="ib">できあがるのは、</span><span class="ib">これまでにないほど</span><span class="ib">味覚に優しく、</span><br
+            class="pc-only">
+          <span class="ib">身体のすみずみまで</span><span class="ib">じんわりと</span><span class="ib">染みわたる</span><span
+            class="ib">「本物の味」のお味噌汁です。</span>
+        </p>
+        <p>
+          幼少期にこの「本物の出汁と味噌の味」を五感で体験することは、<br class="pc-only">
+          子どもたちの豊かな味覚を育み、生涯にわたる健康的な食習慣の土台を作ってくれます。<br class="pc-only">
+          保育園や幼稚園での食育の時間にも、自信を持っておすすめできる体験です。
+        </p>
+        <p>
+          味噌作りだけでなく、本格出汁や発酵調味料の体験ワークショップも、<br class="pc-only">
+          人数やご要望に合わせて柔軟に開催できます。
+        </p>
+        <p>
+          どんな形でもできるので、まずはお気軽にご相談ください☺️
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 波 -->
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C240,60 480,0 720,20 C960,40 1200,10 1440,30 L1440,60 L0,60 Z" fill="#eef6ee" />
+  </svg>
+
+  <!-- 出張・団体貸切 -->
+  <section class="group" style="padding-top:40px" id="group">
+    <div class="inner">
+      <span class="sec-label">出張・団体・貸切</span>
+      <h2 class="sec-title"><span class="ib">出張ワークショップ・</span><br class="pc-only"><span class="ib">団体さま貸切も承ります</span>
+      </h2>
+
+      <div class="group-card copy">
+        <h3>出張ワークショップ</h3>
+        <p>
+          学校、行政、保育園、職場などへ出張し、<br class="pc-only">
+          こどもたちの食育の時間や、職場の研修として<br class="pc-only">
+          味噌作りワークショップを開催することが可能です。
+        </p>
+        <p>
+          「本物の味」と「仕込む体験」を通じて、<br class="pc-only">
+          暮らしに根ざした食育をお届けします。
+        </p>
+      </div>
+
+      <div class="group-card copy">
+        <h3>団体さま向け 貸切味噌作り・発酵調味料体験</h3>
+        <p>
+          婦人会、PTA、サークル、企業チーム、アスリートやスポーツチームなどの団体さま向けに、<br class="pc-only">
+          工房を貸し切っての味噌作り・発酵調味料体験も承っています。
+        </p>
+        <p>
+          みんなでワイワイ仕込む時間は、<br class="pc-only">
+          最高のチームビルディングや地域交流の時間になります。
+        </p>
+        <p>
+          <span class="ib">人数やご予算に</span><span class="ib">合わせてご提案</span><span class="ib">しますので、</span><br
+            class="pc-only">
+          <span class="ib">詳細はお気軽にご相談ください☺️</span>
+        </p>
+      </div>
+
+      <div style="margin-top:44px">
+        <a class="cta-btn sub" href="https://lin.ee/Sv9TpvY">出張・団体貸切のご相談はこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagramセクション -->
+  <section class="instagram-section" id="instagram">
+    <div class="inner">
+      <span class="sec-label">Instagramで発信中</span>
+      <h2 class="sec-title"><span class="ib">日々の手仕事と、</span><br class="pc-only"><span class="ib">発酵のある暮らし</span></h2>
+      <p class="copy" style="max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.8;">
+        お味噌作りの様子や、発酵食がもたらす豊かな暮らしのヒントを日々発信しています。<br class="pc-only">ぜひ覗いてみてくださいね。
+      </p>
+
+      <div class="instagram-grid">
+        <div class="instagram-item">
+          <img src="images/instagram_feed_1.jpg" alt="もとぶ糀の里の投稿写真1：仕込みの様子">
+        </div>
+        <div class="instagram-item">
+          <img src="images/instagram_feed_2.jpg" alt="もとぶ糀の里の投稿写真2：美味しそうなキムチ">
+        </div>
+        <div class="instagram-item">
+          <img src="images/instagram_feed_3.jpg" alt="もとぶ糀の里の投稿写真3：マルシェでの接客風景">
+        </div>
+        <div class="instagram-item">
+          <img src="images/instagram_feed_4.jpg" alt="もとぶ糀の里の投稿写真4：丘の上のマルシェ案内">
+        </div>
+      </div>
+
+      <div class="instagram-btn-group">
+        <a href="https://www.instagram.com/motobukouji.85" target="_blank" rel="noopener" class="instagram-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>もとぶ糀の里工房 みら<br><span style="font-size: 0.8rem; font-weight: normal; opacity: 0.85;">@motobukouji.85</span></span>
+        </a>
+        <a href="https://www.instagram.com/ryukyu_85/" target="_blank" rel="noopener" class="instagram-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>琉球発酵食糀料理教室<br><span style="font-size: 0.8rem; font-weight: normal; opacity: 0.85;">@ryukyu_85</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section class="cta-section">
+    <div class="inner">
+      <h2 class="sec-title"><span class="ib">楽しく美味しく、</span><br class="pc-only"><span class="ib">発酵食を学びましょう。</span></h2>
+      <div class="cta-photo">
+        <img src="images/もとぶ糀　夫妻　世界を救う.jpg" alt="Enjoy HAKKO LIFE!! ── もとぶ糀の里 嘉手苅夫妻">
+      </div>
+      <p class="cta-photo-caption">Enjoy HAKKO LIFE!!</p>
+      <div class="copy">
+        <p>
+          <span class="ib">毎回大人気の</span><span class="ib">ワークショップのため、</span><br class="pc-only">
+          <span class="ib">気になった今のうちの</span><span class="ib">お申し込みがおすすめです。</span>
+        </p>
+        <p>
+          <span class="ib">皆様のお申し込みを、</span><span class="ib">心よりお待ちしております。</span>
+        </p>
+      </div>
+      <a class="cta-btn" href="https://select-type.com/e/?id=QAhUP2po6Kc&eventPageID=" target="_blank" rel="noopener">体験お申し込みはこちら</a>
+      <p class="cta-note">ご予約・日程のご相談・親子枠のお問い合わせも、こちらからどうぞ。</p>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <div
+      style="max-width: 90px; margin: 0 auto 16px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,0.2);">
+      <img src="images/motobukouji_logo.jpeg" alt="もとぶ糀 ロゴ" style="width: 100%; height: auto;">
+    </div>
+    <p class="brand">もとぶ糀の里工房 みら</p>
+    <p class="slogan">発酵食は地球と人類を救う</p>
+    <p>暮らしに活かせる無限大の発酵食をご提案。<br>沖縄県本部町 / 琉球発酵食糀料理教室</p>
+  </footer>
+
+  <script>
+    (function () {
+      var burger = document.getElementById('navBurger');
+      var links = document.getElementById('navLinks');
+      burger.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+      });
+      // メニュー内のリンクを押したら自動で閉じる
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          burger.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

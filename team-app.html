@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>守成クラブ チーム紹介アプリ＋ポスター制作のご案内｜比嘉なつき</title>
+<meta name="description" content="チーム全員の紹介窓口を、QRコード1つに。メンバー検索・診断アプリと印刷用ポスターのセットを、守成クラブ特別価格 98,000円（税込）でお作りします。美容と健康チームで稼働中の実物をそのままご覧いただけます。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   配色はブランド基準（ゆいどころ）に準拠
+   えんじ #933E44 ／ 生成り #F9E8CE ／ セージ #99A084
+   やさしい桃 #EAAC97 ／ 墨色 #37322D ／ 台紙 #FDFAF4
+   純黒・純白のベタは使わない
+   ============================================ */
+:root{
+  --paper:#F9E8CE;
+  --card:#FDFAF4;
+  --ink:#37322D;
+  --ink-sub:rgba(55,50,45,.72);
+  --ink-muted:rgba(55,50,45,.55);
+  --enji:#933E44;
+  --enji-deep:#7C3238;
+  --sage:#99A084;
+  --momo:#EAAC97;
+  --line:rgba(55,50,45,.12);
+  --line-enji:rgba(147,62,68,.28);
+  --radius-lg:22px;
+  --radius-md:14px;
+  --shadow-soft:0 12px 30px -20px rgba(55,50,45,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Noto Sans JP','Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.9;
+  letter-spacing:.03em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:860px;margin:0 auto;padding:0 20px}
+section{padding:44px 0}
+
+/* ---- Hero ---- */
+.hero{
+  background:linear-gradient(180deg,rgba(234,172,151,.20),rgba(249,232,206,0) 70%);
+  padding:52px 0 40px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  display:inline-block;
+  font-size:.74rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  color:var(--enji);
+  background:rgba(147,62,68,.07);
+  border:1px solid var(--line-enji);
+  border-radius:20px;
+  padding:5px 13px;
+  margin-bottom:18px;
+  line-height:1.6;
+}
+.hero h1{
+  font-size:1.85rem;
+  font-weight:900;
+  line-height:1.55;
+  letter-spacing:.01em;
+  margin-bottom:20px;
+}
+.hero h1 .accent{color:var(--enji)}
+.hero-lead{color:var(--ink-sub);font-size:1rem}
+.hero-lead .quote{
+  display:block;
+  color:var(--ink);
+  font-weight:700;
+  margin-bottom:8px;
+}
+.hero-sign{
+  margin-top:24px;
+  padding-top:18px;
+  border-top:1px dashed var(--line-enji);
+  font-size:.86rem;
+  color:var(--ink-muted);
+}
+
+/* ---- 見出し ---- */
+.sec-head{margin-bottom:22px}
+.sec-num{
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  color:var(--sage);
+  display:block;
+  margin-bottom:6px;
+}
+.sec-head h2{
+  font-size:1.4rem;
+  font-weight:900;
+  line-height:1.6;
+}
+.sec-desc{color:var(--ink-sub);font-size:.95rem;margin-top:10px}
+
+/* ---- デモ ---- */
+.demo-box{
+  background:var(--card);
+  border:1px solid var(--line-enji);
+  border-radius:var(--radius-lg);
+  padding:28px 22px;
+  box-shadow:var(--shadow-soft);
+  text-align:center;
+}
+.demo-box p{color:var(--ink-sub);font-size:.95rem;margin-bottom:20px;text-align:left}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:var(--enji);
+  color:var(--card);
+  text-decoration:none;
+  font-weight:800;
+  font-size:1rem;
+  line-height:1.5;
+  padding:16px 26px;
+  border-radius:34px;
+  box-shadow:var(--shadow-soft);
+  transition:background .3s,transform .3s;
+  max-width:100%;
+}
+.btn:hover{background:var(--enji-deep);transform:translateY(-2px)}
+.btn svg{flex:none}
+.demo-note{
+  font-size:.82rem;
+  color:var(--ink-muted);
+  margin-top:14px;
+  line-height:1.8;
+}
+.demo-chip{
+  display:inline-block;
+  background:rgba(153,160,132,.16);
+  border-radius:6px;
+  padding:2px 9px;
+  font-weight:700;
+  color:var(--ink-sub);
+  margin:0 2px;
+}
+
+/* ---- 機能 ---- */
+.feat{list-style:none;display:grid;gap:12px}
+.feat li{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:18px 18px 18px 20px;
+  border-left:4px solid var(--momo);
+}
+.feat b{display:block;font-size:1.02rem;font-weight:800;margin-bottom:4px}
+.feat span{display:block;color:var(--ink-sub);font-size:.9rem;line-height:1.85}
+
+/* ---- 料金 ---- */
+.price-card{
+  background:var(--card);
+  border:2px solid var(--line-enji);
+  border-radius:var(--radius-lg);
+  padding:26px 20px;
+  box-shadow:var(--shadow-soft);
+}
+.price-card h3{
+  font-size:1.15rem;
+  font-weight:900;
+  text-align:center;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:18px;
+}
+.incl{list-style:none;display:grid;gap:12px;margin-bottom:24px}
+.incl li{display:flex;gap:12px;align-items:flex-start}
+.incl .no{
+  flex:none;
+  width:26px;height:26px;
+  border-radius:50%;
+  background:var(--enji);
+  color:var(--card);
+  font-size:.78rem;
+  font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:4px;
+}
+.incl b{display:block;font-weight:800;font-size:.98rem;line-height:1.7}
+.incl span{display:block;color:var(--ink-sub);font-size:.87rem;line-height:1.8}
+.price-body{text-align:center;padding:20px 0 6px;border-top:1px dashed var(--line-enji)}
+.price-was{
+  color:var(--ink-muted);
+  font-size:.95rem;
+  margin-bottom:6px;
+}
+.price-was s{text-decoration-thickness:2px;text-decoration-color:var(--enji)}
+.price-label{
+  display:inline-block;
+  font-size:.78rem;
+  font-weight:800;
+  color:var(--enji);
+  background:rgba(147,62,68,.08);
+  border:1px solid var(--line-enji);
+  border-radius:16px;
+  padding:3px 12px;
+  margin-bottom:10px;
+}
+.price-now{
+  font-size:2.5rem;
+  font-weight:900;
+  color:var(--enji);
+  line-height:1.25;
+  letter-spacing:0;
+}
+.price-now .yen{font-size:1.15rem;margin-left:2px}
+.price-tax{font-size:.82rem;color:var(--ink-muted);display:block;margin-top:2px}
+.market{
+  margin-top:20px;
+  background:rgba(153,160,132,.12);
+  border-radius:var(--radius-md);
+  padding:14px 16px;
+  font-size:.8rem;
+  color:var(--ink-sub);
+  line-height:1.85;
+}
+.market b{color:var(--ink);font-weight:700}
+
+/* ---- サブメニュー ---- */
+.sub-list{list-style:none;display:grid;gap:10px;margin-top:22px}
+.sub-list li{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:15px 17px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px 14px;
+  align-items:baseline;
+  justify-content:space-between;
+}
+.sub-list .nm{font-weight:700;font-size:.95rem}
+.sub-list .pr{font-weight:900;color:var(--enji);font-size:1.05rem;white-space:nowrap}
+.sub-list .pr small{font-size:.76rem;font-weight:700;color:var(--ink-muted)}
+
+/* ---- ステップ ---- */
+.steps{list-style:none;display:grid;gap:14px;counter-reset:st}
+.steps li{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:18px 18px 18px 58px;
+  position:relative;
+}
+.steps li::before{
+  counter-increment:st;
+  content:"STEP " counter(st);
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:44px;
+  background:var(--sage);
+  color:var(--card);
+  font-size:.6rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  writing-mode:vertical-rl;
+  text-orientation:sideways;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:var(--radius-md) 0 0 var(--radius-md);
+}
+.steps b{display:block;font-size:1.02rem;font-weight:800;margin-bottom:4px;line-height:1.7}
+.steps span{display:block;color:var(--ink-sub);font-size:.9rem;line-height:1.85}
+
+/* ---- サポート ---- */
+.support{
+  background:var(--card);
+  border:1px solid var(--line-enji);
+  border-radius:var(--radius-lg);
+  padding:24px 20px;
+}
+.support p{color:var(--ink-sub);font-size:.94rem}
+.support p + p{margin-top:12px}
+
+/* ---- CTA ---- */
+.cta{
+  background:var(--card);
+  border:1px solid var(--line-enji);
+  border-radius:26px;
+  padding:36px 22px;
+  text-align:center;
+  box-shadow:var(--shadow-soft);
+}
+.cta h2{font-size:1.35rem;font-weight:900;line-height:1.6;margin-bottom:14px}
+.cta p{color:var(--ink-sub);font-size:.95rem;margin-bottom:22px;text-align:left}
+.cta-placeholder{
+  border:2px dashed var(--line-enji);
+  border-radius:34px;
+  padding:16px 22px;
+  font-weight:800;
+  color:var(--enji);
+  font-size:1rem;
+  line-height:1.6;
+  display:inline-block;
+  max-width:100%;
+}
+.cta-note{font-size:.82rem;color:var(--ink-muted);margin-top:16px;line-height:1.85}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:28px 0 40px;
+  text-align:center;
+  color:var(--ink-muted);
+  font-size:.8rem;
+}
+
+@media (min-width:700px){
+  .container{padding:0 28px}
+  section{padding:60px 0}
+  .hero{padding:70px 0 56px}
+  .hero h1{font-size:2.4rem}
+  .sec-head h2{font-size:1.65rem}
+  .price-card{padding:36px 32px}
+  .price-now{font-size:3.1rem}
+  .demo-box{padding:36px 32px}
+  .demo-box p{text-align:center}
+  .cta{padding:52px 40px}
+  .cta p{text-align:center;max-width:620px;margin-left:auto;margin-right:auto}
+  .feat{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <div class="container">
+    <span class="eyebrow">守成クラブ 幹事・世話人のみなさまへ</span>
+    <h1>チーム全員の紹介窓口が、<br><span class="accent">QRコード1つ</span>に。</h1>
+    <p class="hero-lead">
+      <span class="quote">「その話ができる人、うちのチームにいたはずなんだけどな……」</span>
+      その"はずの人"が、2タップで出てくる。
+      チームのメンバー検索・診断アプリと、貼るだけで使えるポスターをセットでお作りします。
+    </p>
+    <p class="hero-sign">
+      制作：比嘉なつき（作業療法士 ／ 沖縄・北中城村「ゆいどころ」）
+    </p>
+  </div>
+</div>
+
+<!-- ===== 1. 実物デモ ===== -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-num">01 — DEMO</span>
+      <h2>説明より先に、実物をさわってください。</h2>
+      <p class="sec-desc">
+        美容と健康チームで、いま実際に動いているものです。会員限定のデモではありません。このまま、お手元のスマホで開きます。
+      </p>
+    </div>
+    <div class="demo-box">
+      <p>
+        「肩まわりがつらい」「贈りものを探している」——そんな入口から選んでいくと、対応できるメンバーが出てきます。
+        30秒ほどさわってみていただくのが、いちばん早いです。
+      </p>
+      <a class="btn" href="https://yuidocoro-wq.github.io/Wellness-and-Beauty/" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+        稼働中のチームアプリを見る
+      </a>
+      <p class="demo-note">
+        守成クラブ <span class="demo-chip">美容と健康チーム</span> ／ 13名・14事業を掲載
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. できること ===== -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-num">02 — FEATURES</span>
+      <h2>できること</h2>
+      <p class="sec-desc">
+        メンバーさんが使う画面から、そのままご説明しますね。
+      </p>
+    </div>
+    <ul class="feat">
+      <li>
+        <b>2タップの診断</b>
+        <span>いくつかの選択肢を選ぶだけで、当てはまるメンバーが全員表示されます。ひとりに絞り込まないのがポイントです。</span>
+      </li>
+      <li>
+        <b>カテゴリ × シーン × お悩みで探せる</b>
+        <span>「どんな業種か」だけでなく、「どんな場面か」「何に困っているか」からも探せます。組み合わせて絞り込めます。</span>
+      </li>
+      <li>
+        <b>メンバーごとの写真スライダーと詳細ページ</b>
+        <span>お店やお人柄が伝わる写真を複数枚。ひとりずつの詳細ページに、事業の内容をまとめて載せられます。</span>
+      </li>
+      <li>
+        <b>お気に入り登録</b>
+        <span>気になったメンバーに印をつけておけます。「あとでゆっくり見よう」ができます。</span>
+      </li>
+      <li>
+        <b>紹介文コピー ＆ LINE共有がワンタップ</b>
+        <span>紹介の文章がすでに用意してあります。ワンタップでコピーして、そのままLINEで送れます。紹介する側の手間が、いちばん減るところです。</span>
+      </li>
+      <li>
+        <b>スマホ最適化・公開まで込み</b>
+        <span>スマホで見やすく整えます。ネット上への公開（ホスティング）までこちらで行い、URLとQRコードをお渡しします。</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 3. 料金 ===== -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-num">03 — PRICE</span>
+      <h2>料金のこと</h2>
+      <p class="sec-desc">
+        アプリとポスターは、セットでお作りするかたちにしています。片方だけだと、せっかくのQRコードが行き先を持たないままになってしまうので。
+      </p>
+    </div>
+
+    <div class="price-card">
+      <h3>チームセット</h3>
+      <ul class="incl">
+        <li>
+          <span class="no">1</span>
+          <div>
+            <b>メンバー検索・診断アプリ</b>
+            <span>公開まで込みです。URLとQRコードをお渡しします。</span>
+          </div>
+        </li>
+        <li>
+          <span class="no">2</span>
+          <div>
+            <b>印刷用ポスターデータ一式</b>
+            <span>アプリへのQRコードを連動させます。そのまま印刷にお出しいただけます。</span>
+          </div>
+        </li>
+        <li>
+          <span class="no">3</span>
+          <div>
+            <b>メンバー情報の収集も、こちらが持ちます</b>
+            <span>写真や事業内容の集めかたの段取りまで引き受けます。幹事さんは、窓口ひとりでだいじょうぶです。</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="price-body">
+        <p class="price-was">通常価格 <s>275,000円</s></p>
+        <span class="price-label">守成クラブ特別価格</span>
+        <p class="price-now">98,000<span class="yen">円</span></p>
+        <span class="price-tax">（税込）</span>
+      </div>
+
+      <p class="market">
+        <b>通常価格の考えかた。</b>
+        この規模の診断コンテンツ＋検索サイトは、フリーランスへの発注で25万〜50万円、制作会社で60万〜150万円が相場です。設計から公開後まで私ひとりで手を動かしているぶん、その幅の下のほうに置いています。
+      </p>
+    </div>
+
+    <ul class="sub-list">
+      <li>
+        <span class="nm">ポスター・チラシ単品</span>
+        <span class="pr">16,500円 <small>（税込）</small></span>
+      </li>
+      <li>
+        <span class="nm">メンバー追加・差し替え更新</span>
+        <span class="pr">3,300円 <small>／回（税込）</small></span>
+      </li>
+      <li>
+        <span class="nm">年間サポート（更新おまかせ）</span>
+        <span class="pr">11,000円 <small>（税込）</small></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 4. 進めかた ===== -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-num">04 — FLOW</span>
+      <h2>進めかたは、3ステップ</h2>
+      <p class="sec-desc">
+        幹事さんの手が止まらないように、いちばん重たい「集める」ところをこちらで持ちます。
+      </p>
+    </div>
+    <ul class="steps">
+      <li>
+        <b>幹事さんと打ち合わせ</b>
+        <span>チームの人数や、どんな入口から探せるようにするか。今のチームの雰囲気をうかがいながら決めていきます。</span>
+      </li>
+      <li>
+        <b>メンバー情報は、こちらが集めます</b>
+        <span>ご案内の文面づくりから、写真や事業内容の回収、催促のご連絡まで。幹事さんは、窓口ひとりを立てていただくだけでだいじょうぶです。</span>
+      </li>
+      <li>
+        <b>公開、そしてポスター納品</b>
+        <span>アプリを公開してURLとQRコードをお渡しし、あわせて印刷用のポスターデータをお納めします。ここから、チームの紹介窓口として使いはじめられます。</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 5. 更新サポート ===== -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-num">05 — SUPPORT</span>
+      <h2>作ったあとの、更新のこと</h2>
+    </div>
+    <div class="support">
+      <p>
+        メンバーの入れ替わりや、事業内容が変わることは必ずあります。そこで止まってしまうと、せっかくのアプリが「古い情報のまま貼ってあるもの」になってしまうので。
+      </p>
+      <p>
+        追加・差し替えは <b>1回 3,300円（税込）</b>。年に何度も動きそうなチームには、<b>年間サポート 11,000円（税込）</b> をご用意しています。どちらが合うかは、チームの動きを見てからで大丈夫です。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. CTA ===== -->
+<section>
+  <div class="container">
+    <div class="cta">
+      <h2>「うちのチームでも、できますか？」から、どうぞ。</h2>
+      <p>
+        まだ会で決まっていない段階のご相談で構いません。「うちは◯人くらいなんですが」くらいの粒度でだいじょうぶです。
+        人数やチームの雰囲気をうかがってから、どんなかたちが合いそうかを一緒に考えます。
+      </p>
+      <a class="btn" href="https://line.me/R/ti/p/@304uicme" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+        LINEで相談してみる
+      </a>
+      <p class="cta-note">
+        売り込みのご連絡はいたしません。合わないと感じられたら、そのままお断りいただいてだいじょうぶです。
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 比嘉なつき ／ ゆいどころ</p>
+  </div>
+</footer>
+
+</body>
+</html>
