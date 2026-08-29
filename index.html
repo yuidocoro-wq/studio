@@ -812,6 +812,89 @@
       margin: 18px auto 0;
     }
 
+    /* おすすめ教材への案内バナー */
+    .shelf-banner {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      margin-bottom: 80px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .shelf-banner:hover {
+      border-color: var(--line-enji);
+      box-shadow: 0 20px 40px -28px rgba(55, 50, 45, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .shelf-banner-icon {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(147, 62, 68, 0.07);
+      border: 1px solid var(--line-enji);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--enji);
+      font-size: 1.15rem;
+    }
+
+    .shelf-banner-text {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .shelf-banner-label {
+      display: block;
+      font-weight: 800;
+      font-size: 1.02rem;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    .shelf-banner-desc {
+      display: block;
+      color: var(--ink-sub);
+      font-size: 0.87rem;
+      line-height: 1.85;
+    }
+
+    .shelf-banner-btn {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line-enji);
+      color: var(--enji);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 12px 22px;
+      border-radius: var(--radius-sm);
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .shelf-banner:hover .shelf-banner-btn {
+      background: var(--enji);
+      color: var(--card);
+      border-color: var(--enji);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .shelf-banner,
+      .shelf-banner:hover {
+        transition: none;
+        transform: none;
+      }
+    }
+
     /* Footer */
     footer {
       border-top: 1px solid var(--line);
@@ -1109,6 +1192,17 @@
       .service-card {
         padding: 26px 20px;
       }
+      .shelf-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px 20px;
+        margin-bottom: 56px;
+      }
+      .shelf-banner-btn {
+        width: 100%;
+        justify-content: center;
+      }
     }
 
     @media (max-width: 400px) {
@@ -1135,6 +1229,7 @@
         <li><a href="#works">制作実績</a></li>
         <li class="nav-optional"><a href="#about">プロフィール</a></li>
         <li><a href="#services">お受けしていること</a></li>
+        <li><a href="./osusume.html">おすすめ教材</a></li>
         <li><a href="#contact">ご相談</a></li>
       </ul>
     </div>
@@ -1497,6 +1592,20 @@
 
     </div>
   </main>
+
+  <!-- おすすめ教材への案内（実績一覧の直後） -->
+  <section class="container">
+    <a href="./osusume.html" class="shelf-banner">
+      <span class="shelf-banner-icon"><i class="fa-solid fa-book-open"></i></span>
+      <span class="shelf-banner-text">
+        <span class="shelf-banner-label">買ってよかったAI教材</span>
+        <span class="shelf-banner-desc">ここに並べた制作物は、AIを使いながら私ひとりで作っています。その手元でいまも使っている教材を7つ、本棚のように並べました。</span>
+      </span>
+      <span class="shelf-banner-btn">
+        おすすめ教材を見る <i class="fa-solid fa-arrow-right-long"></i>
+      </span>
+    </a>
+  </section>
 
   <!-- About Section -->
   <section class="about-section" id="about">
